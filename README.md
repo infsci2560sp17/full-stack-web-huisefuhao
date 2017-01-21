@@ -4,12 +4,12 @@ TODO : Please provide a detailed project description.
 
 ## Build status
 
-TODO : Modify to match your project specific Travis Build
+
 [![Build Status](https://travis-ci.org/infsci2560sp17/full-stack-web-huisefuhao.svg?branch=master)](https://travis-ci.org/infsci2560sp17/full-stack-web-huisefuhao)
 
 ## Web Site
 
-TODO : Please provide a link to your web site ![](https://...)
+[Neil's Website](https://huisefuhao.herokuapp.com/)
 
 ## Key Features
 
