@@ -4,12 +4,18 @@ TODO : Please provide a detailed project description.
 
 ## Build status
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ed14ab36d614c853d8ddd480059ccf652ad9210d
 [![Build Status](https://travis-ci.org/infsci2560sp17/full-stack-web-huisefuhao.svg?branch=master)](https://travis-ci.org/infsci2560sp17/full-stack-web-huisefuhao)
 
 ## Web Site
 
+<<<<<<< HEAD
 [Neil's Website](https://huisefuhao.herokuapp.com/)
+=======
+>>>>>>> ed14ab36d614c853d8ddd480059ccf652ad9210d
 
 ## Key Features
 
