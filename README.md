@@ -12,6 +12,11 @@
 5. Why is your proposed Web application unique or creative beyond simply meeting the minimum requirements?
     - My site can fully show the uniqueness of B&B to its target customer by providing more detailed information about its characteristic as well as special activity information. B&B operators can also combine this site with SNS to make word-of-mouth marketing.
 
+## Latest Progress
+
+Finish Assignment 1.3 Full Stack Step 1
+- Details in CHANGELOG.md
+
 ## Build status
 
 
