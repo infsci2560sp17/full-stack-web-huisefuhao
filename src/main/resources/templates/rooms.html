@@ -4,7 +4,7 @@
         <title>User Home</title>
     </head>
     <body>
-        <h1 data-th-inline="text">[[${#httpServletRequest.remoteUser}]]'s ROOM's!</h1>
+        <h1 data-th-inline="text">ROOM's INFORMATION</h1>
 
         <div>
             <table style="border: 1px solid black">
@@ -14,7 +14,7 @@
                     <th>Room Type</th>
                     <th>Price</th>
                     <th>Size</th>
-                    <th>Max Occupancy</th>
+                    <th>MaxOccupancy</th>
                     <th>Bed Number</th>
                     <th>Bed Type</th>
 
@@ -49,9 +49,9 @@
             Bed Number: <input type="text" name="bedNumber" /><br />
             Bed Type:<br />
             <input type="radio" name="bedType" value="Unknown" checked="checked" /> Unknown<br />
-            <input type="radio" name="bedType" value="Twin" /> Twin Bed Room<br />
-            <input type="radio" name="bedType" value="Queen" /> Double Queen Room<br />
-            <input type="radio" name="bedType" value="King" /> Queen Size Room<br />
+            <input type="radio" name="bedType" value="Twin" /> Twin<br />
+            <input type="radio" name="bedType" value="Queen" /> Queen<br />
+            <input type="radio" name="bedType" value="King" /> King<br />
             <input type="submit" value="Add Room"/>
         </form>
         
