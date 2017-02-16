@@ -9,13 +9,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ## [v1.3] - 2017-02-16
 ### Added
-- Answered in README.md
-    - Create entity Room.
-    - Create repository RoomRepository.
-    - Create a RESTful web service RoomServices and return JSON.
-    - Create a MVC Controller RoomsController and implement get and post methods.
-    - Modify FullStackWebApplication, MvcConfig, WebSecurityConfig and CustomerRepositoryTest files.
-    - Create MVC page rooms, delete hello page and modify home, login pages.
+- Create entity Room.
+- Create repository RoomRepository.
+- Create a RESTful web service RoomServices and return JSON.
+- Create a MVC Controller RoomsController and implement get and post methods.
+- Modify FullStackWebApplication, MvcConfig, WebSecurityConfig and CustomerRepositoryTest files.
+- Create MVC page rooms, delete hello page and modify home, login pages.
 
 
 ## [v1.2] - 2017-01-28
