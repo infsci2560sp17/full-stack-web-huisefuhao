@@ -7,6 +7,17 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Added
 - TBD.
 
+## [v1.3] - 2017-02-16
+### Added
+- Answered in README.md
+    - Create entity Room.
+    - Create repository RoomRepository.
+    - Create a RESTful web service RoomServices and return JSON.
+    - Create a MVC Controller RoomsController and implement get and post methods.
+    - Modify FullStackWebApplication, MvcConfig, WebSecurityConfig and CustomerRepositoryTest files.
+    - Create MVC page rooms, delete hello page and modify home, login pages.
+
+
 ## [v1.2] - 2017-01-28
 ### Added
 - Answered in README.md
@@ -22,6 +33,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - Configured developer workspace.
 - Deployed to Heroku.
 
-[Unreleased]: https://github.com/infsci2560sp17/full-stack-web-huisefuhao/compare/v1.2...HEAD
+[Unreleased]: https://github.com/infsci2560sp17/full-stack-web-huisefuhao/compare/v1.3...HEAD
+[v1.3]: https://github.com/infsci2560sp17/full-stack-web-huisefuhao/compare/v1.2...v1.3
 [v1.2]: https://github.com/infsci2560sp17/full-stack-web-huisefuhao/compare/v1.1...v1.2
 [v1.1]: https://github.com/infsci2560sp17/full-stack-web-huisefuhao/compare/...v1.1
