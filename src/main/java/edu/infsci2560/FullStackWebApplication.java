@@ -22,8 +22,8 @@ public class FullStackWebApplication {
         ApplicationContext ctx = SpringApplication.run(FullStackWebApplication.class, args);
 
         RoomRepository repository = ctx.getBean(RoomRepository.class);
-        repository.save(new Room(1L, "beast", RoomType.Suite, 120, 60, 3, 2, BedType.Queen));
-        repository.save(new Room(2L, "cow", RoomType.Twin Bed Room, 110, 50, 2, 1, BedType.Queen));
+        repository.save(new Room(1L, "beast", RoomType.Suite, 120, 60, 3, 2, BedType.King));
+        repository.save(new Room(2L, "cow", RoomType.QueenBedRoom, 110, 50, 2, 1, BedType.Queen));
         repository.save(new Room(3L, "deer", RoomType.Suite, 100, 55, 2, 1, BedType.King));
     }
 

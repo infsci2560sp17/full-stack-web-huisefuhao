@@ -23,11 +23,19 @@ public class Room {
     private static final long serialVersionUID = 1L;
 
     public enum RoomType {
-        Unknown,Twin Bed Room,Double Queen Room,Queen Size Room,King Size Room,Suite;
+        Unknown,
+        TwinBedRoom,
+        DoubleQueenRoom,
+        QueenSizeRoom,
+        KingSizeRoom,
+        Suite
     }
     
     public enum BedType {
-        Unknown,Twin,Queen,King
+        Unknown,
+        Twin,
+        Queen,
+        King
     }
 
     @Id
