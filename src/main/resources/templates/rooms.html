@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User Home</title>
+    </head>
+    <body>
+        <h1 data-th-inline="text">[[${#httpServletRequest.remoteUser}]]'s ROOM's!</h1>
+
+        <div>
+            <table style="border: 1px solid black">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Room Type</th>
+                    <th>Price</th>
+                    <th>Size</th>
+                    <th>Max Occupancy</th>
+                    <th>Bed Number</th>
+                    <th>Bed Type</th>
+
+                </tr>
+                <tr data-th-each="room : ${rooms}">
+                    <td data-th-text="${book.id}"></td>
+                    <td data-th-text="${book.name}"></td>
+                    <td data-th-text="${book.roomType}"></td>
+                    <td data-th-text="${book.price}"></td>
+                    <td data-th-text="${book.size}"></td>
+                    <td data-th-text="${book.maxOccupancy}"></td>
+                    <td data-th-text="${book.bedNumber}"></td>
+                    <td data-th-text="${book.bedType}"></td>
+                </tr>
+            </table>
+        </div>
+        
+        <hr />
+        Add ROOM<br />
+        <form data-th-action="@{/rooms/add}" name="addRoomForm" method="post">
+            Name: <input type="text" name="name" /><br />
+            Room Type:<br />
+            <input type="radio" name="roomType" value="Unknown" checked="checked" /> Unknown<br />
+            <input type="radio" name="roomType" value="Twin Bed Room" /> Twin Bed Room<br />
+            <input type="radio" name="roomType" value="Double Queen Room" /> Double Queen Room<br />
+            <input type="radio" name="roomType" value="Queen Size Room" /> Queen Size Room<br />
+            <input type="radio" name="roomType" value="King Size Room" /> King Size Room<br />
+            <input type="radio" name="roomType" value="Suite" /> Suite<br />
+            Price: <input type="text" name="price" />
+            Size: <input type="text" name="size" /><br />
+            Max Occupancy: <input type="text" name="maxOccupancy" />
+            Bed Number: <input type="text" name="bedNumber" /><br />
+            Bed Type:<br />
+            <input type="radio" name="bedType" value="Unknown" checked="checked" /> Unknown<br />
+            <input type="radio" name="bedType" value="Twin" /> Twin Bed Room<br />
+            <input type="radio" name="bedType" value="Queen" /> Double Queen Room<br />
+            <input type="radio" name="bedType" value="King" /> Queen Size Room<br />
+            <input type="submit" value="Add Room"/>
+        </form>
+        
+        <hr />       
+        <form data-th-action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
+    </body>
+</html>
