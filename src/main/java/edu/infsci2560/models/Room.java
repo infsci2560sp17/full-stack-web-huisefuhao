@@ -130,7 +130,7 @@ public class Room {
     /**
      * @return the price
      */
-    public Lang getPrice() {
+    public Long getPrice() {
         return price;
     }
 
