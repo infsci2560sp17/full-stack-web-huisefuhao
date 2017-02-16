@@ -63,7 +63,7 @@ public class Room {
     public Room(Long id, String name, RoomType roomType, Long price, Long size, Long maxOcuupancy, Long bedNumber, BedType bedType) {
         this.id = id;
         this.name = name;
-        this.roomType = eoomType;
+        this.roomType = roomType;
         this.price = price;
         this.size = size;
         this.maxOccupancy = maxOccupancy;
@@ -103,7 +103,7 @@ public class Room {
     /**
      * @return the workoutType
      */
-    public WorkoutType getRoomType() {
+    public RoomType getRoomType() {
         return roomType;
     }
 
@@ -130,7 +130,7 @@ public class Room {
     /**
      * @return the price
      */
-    public String getPrice() {
+    public Lang getPrice() {
         return price;
     }
 
@@ -172,7 +172,7 @@ public class Room {
     /** 
      * @return the BedType
      */
-    public WorkoutType getBedType() {
+    public BedType getBedType() {
        return bedType;
     }
 
