@@ -60,7 +60,7 @@ public class Room {
         this.bedType = BedType.Unknown;
     }
 
-    public Room(Long id, String name, RoomType roomType, Long price, Long size, Long maxOcuupancy, Long bedNumber, BedType bedType) {
+    public Room(Long id, String name, RoomType roomType, Long price, Long size, Long maxOccupancy, Long bedNumber, BedType bedType) {
         this.id = id;
         this.name = name;
         this.roomType = roomType;
