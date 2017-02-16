@@ -169,6 +169,21 @@ public class Room {
         this.maxOccupancy = maxOccupancy;
     }
     
+    /**
+     * @return the bedNumber
+     */
+    public Long getBedNumber() {
+        return bedNumber;
+    }
+
+    /**
+     * @param bedNumber to set
+     */
+    public void setBedNumber(Long bedNumber) {
+        this.bedNumber = bedNumber;
+    }
+
+
     /** 
      * @return the BedType
      */
@@ -179,7 +194,7 @@ public class Room {
     /**
      * @param bedType the BedType to set
      */
-    public void setRoomType(BedType bedType) {
+    public void setBedType(BedType bedType) {
        this.bedType = bedType;
     }
 
