@@ -12,4 +12,4 @@ import org.springframework.data.repository.PagingAndSortingRepository;
  *
  * @author neil
  */
-public interface ActivityRepository extends PagingAndSortingRepository<Breakfast, Long> {}
+public interface BreakfastRepository extends PagingAndSortingRepository<Breakfast, Long> {}

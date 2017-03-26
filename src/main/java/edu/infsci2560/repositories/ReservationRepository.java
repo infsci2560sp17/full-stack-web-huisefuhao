@@ -12,4 +12,4 @@ import org.springframework.data.repository.PagingAndSortingRepository;
  *
  * @author neil
  */
-public interface Reservation extends PagingAndSortingRepository<Reservation, Long> {}
+public interface ReservationRepository extends PagingAndSortingRepository<Reservation, Long> {}
