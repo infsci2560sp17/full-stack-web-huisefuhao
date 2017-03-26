@@ -68,7 +68,7 @@ public class ReservationService {
         repository.delete(id);
     }
     */
-    @RequestMapping(value = "/{id}", method = RequestMethod.PUT, consumes = "application/json")
+    /*@RequestMapping(value = "/{id}", method = RequestMethod.PUT, consumes = "application/json")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @Transactional
     public void update(@RequestBody Reservation reservation, @PathVariable("id") long id) throws IOException {
@@ -83,6 +83,5 @@ public class ReservationService {
     public void delete(@PathVariable("id") long id) {
         repository.delete(id);
     }
-
-    
+    */
 }

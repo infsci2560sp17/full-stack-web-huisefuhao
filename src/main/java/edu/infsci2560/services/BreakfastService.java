@@ -70,7 +70,7 @@ public class BreakfastService {
         repository.delete(id);
     }
     */
-    @RequestMapping(value = "/{id}", method = RequestMethod.PUT, consumes = "application/json")
+    /*@RequestMapping(value = "/{id}", method = RequestMethod.PUT, consumes = "application/json")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @Transactional
     public void update(@RequestBody Breakfast breakfast, @PathVariable("id") long id) throws IOException {
@@ -85,5 +85,6 @@ public class BreakfastService {
     public void delete(@PathVariable("id") long id) {
         repository.delete(id);
     }
+    */
     
 }

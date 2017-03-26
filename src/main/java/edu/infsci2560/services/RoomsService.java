@@ -53,6 +53,12 @@ public class RoomsService {
         return new ResponseEntity<>(repository.save(room), headers, HttpStatus.OK);
     }
 
+    @RequestMapping(value = "/{id}", method = RequestMethod.PUT, consumes="application/json", produces = "application/json")
+    public ResponseEntity<Room> update(@RequestBody Room room) {
+        HttpHeaders headers = new HttpHeaders();
+        return new ResponseEntity<>(repository.save(room), headers, HttpStatus.OK);
+    }
+
     /*@RequestMapping(method = RequestMethod.PUT, consumes="application/json", produces = "application/json")
     public ResponseEntity<Room> create(@RequestBody Room room) {
         HttpHeaders headers = new HttpHeaders();
@@ -65,7 +71,7 @@ public class RoomsService {
     }
     */
 
-    @RequestMapping(value = "/{id}", method = RequestMethod.PUT, consumes = "application/json")
+    /*@RequestMapping(value = "/{id}", method = RequestMethod.PUT, consumes = "application/json")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @Transactional
     public void update(@RequestBody Room room, @PathVariable("id") long id) throws IOException {
@@ -80,4 +86,5 @@ public class RoomsService {
     public void delete(@PathVariable("id") long id) {
         repository.delete(id);
     }
+    */
 }
