@@ -32,7 +32,7 @@ public class Reservation {
     protected String email;
 
 
-    public Activity() {
+    public Reservation() {
         this.id = Long.MAX_VALUE;
         this.data = null;
         this.nights = Long.MAX_VALUE;
@@ -40,7 +40,7 @@ public class Reservation {
         this.email = null;
     }
 
-    public Activity(Long id, String date, long nights, String name, String email) {
+    public Reservation(Long id, String date, long nights, String name, String email) {
         this.id = id;
         this.date = date;
         this.nights = nights;
