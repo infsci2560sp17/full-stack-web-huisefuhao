@@ -41,7 +41,7 @@ public class ReservationController {
     }
 
     @RequestMapping(value = "reservation/delete", method = RequestMethod.GET)
-    public ModelAndView delete(@RequestParam("id") Long id) {
+    public ModelAndView delete(@RequestParam(value="id", required=true) Long id) {
         Reservation reservation = repository.findOne(id);
         
         if (reservation != null) {
@@ -49,6 +49,31 @@ public class ReservationController {
         }
 
         return new ModelAndView("reservation", "reservation", repository.findAll());
+    }
+
+    @RequestMapping(value = "reservation/delete/{id}", method = RequestMethod.GET)
+    public ModelAndView deleteRoom(@PathVariable Integer id, final RedirectAttributes redirectAttributes) throws RoomNotFound {
+
+        Reservation reservation = repository.findOne(id);
+        
+        if (reservation != null) {
+            repository.delete(id);
+        }
+
+        return new ModelAndView("reservation", "reservation", repository.findAll());
+    }
+
+    @RequestMapping(value = "reservation/delete/{id}", method = RequestMethod.GET)
+    public ModelAndView delete(@PathVariable Integer id, final RedirectAttributes redirectAttributes) throws RoomNotFound {
+
+        Dvd dvd = repository.findOne(id);
+        
+        if ( dvd != null ) {
+            //log.info("*** recipe is not null");
+            repository.delete(dvd);
+        }
+
+        return new ModelAndView("dvds", "dvds", repository.findOne(id));
     }
     /*
     @RequestMapping(value = "/reservation/put", method = RequestMethod.PUT)
