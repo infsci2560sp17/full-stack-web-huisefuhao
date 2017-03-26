@@ -50,7 +50,7 @@ public class ReservationController {
 
         return new ModelAndView("reservation", "reservation", repository.findAll());
     }
-    
+    /*
     @RequestMapping(value = "/reservation/put", method = RequestMethod.PUT)
     public ModelAndView update(@RequestParam("id") Long id, @RequestParam("date") String date, @RequestParam("nights") Long nights, @RequestParam("name") String name, @RequestParam("email") String emial) {
         Reservation reservation = repository.findOne(id);
