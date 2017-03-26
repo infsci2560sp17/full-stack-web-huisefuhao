@@ -36,15 +36,15 @@ public class Reservation {
         this.id = Long.MAX_VALUE;
         this.data = null;
         this.nights = Long.MAX_VALUE;
-        this.name = null;
+        this.customerName = null;
         this.email = null;
     }
 
-    public Activity(Long id, String date, long nights, String name, String email) {
+    public Activity(Long id, String date, long nights, String customerName, String email) {
         this.id = id;
         this.date = date;
         this.nights = nights;
-        this.name = name;
+        this.customerName = customerName;
         this.email = email;
     }
 
@@ -112,14 +112,14 @@ public class Reservation {
      * @return the price
      */
     public String getName() {
-        return name;
+        return customerName;
     }
 
     /**
      * @param price to set
      */
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String customerName) {
+        this.customerName = customerName;
     }
 
     /**
