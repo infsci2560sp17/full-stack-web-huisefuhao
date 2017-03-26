@@ -4,6 +4,14 @@ import edu.infsci2560.models.Room;
 import edu.infsci2560.models.Room.RoomType;
 import edu.infsci2560.models.Room.BedType;
 import edu.infsci2560.repositories.RoomRepository;
+import edu.infsci2560.models.Activity;
+import edu.infsci2560.models.Activity.ActivityType;
+import edu.infsci2560.repositories.ActivityRepository;
+import edu.infsci2560.models.Breakfast;
+import edu.infsci2560.models.Breakfast.BreakfastType;
+import edu.infsci2560.repositories.BreakfastRepository;
+import edu.infsci2560.models.Reservation;
+import edu.infsci2560.repositories.ReservationRepository;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
