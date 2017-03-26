@@ -27,7 +27,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @author Neil
  */
 @RestController
-@RequestMapping("/public/api/breakfast")
+@RequestMapping("/public/api/reservation")
 public class ReservationService {
 
     @Autowired
