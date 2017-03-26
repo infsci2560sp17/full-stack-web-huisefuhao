@@ -9,7 +9,7 @@
         <script scr="js/script.js"></script>
     </head>
     <body>
-        <div id="div1"><img src="northlight.jpg" /></div>
+        <div id="div1"><img src="picture/northlight.jpg" /></div>
         <h1 data-th-inline="text">ROOM's INFORMATION</h1>
 
         <div>
@@ -60,10 +60,7 @@
             <input type="radio" name="bedType" value="King" /> King<br />
             <input type="submit" value="Add Room"/>
         </form>
-        
         <hr />       
-        <form data-th-action="@{/logout}" method="post">
-            <input type="submit" value="Sign Out"/>
-        </form>
+        <a data-th-href="@{/nav}">HomePage</a>
     </body>
 </html>
