@@ -40,8 +40,8 @@ public class RoomsController {
         return new ModelAndView("rooms", "rooms", repository.findAll());
     }
 
-    @RequestMapping(value = "rooms/delete", method = RequestMethod.DELETE)
-    public ModelAndView deleteGame(@RequestParam(value = "id", required=true) Long id) {
+    /*@RequestMapping(value = "rooms/delete", method = RequestMethod.DELETE)
+    public ModelAndView delete(@RequestParam(value = "id", required=true) Long id) {
         Room room = repository.findOne(id);
         
         if (room != null) {
@@ -50,6 +50,7 @@ public class RoomsController {
 
         return new ModelAndView("rooms", "rooms", repository.findAll());
     }
+    */
 
     
 }

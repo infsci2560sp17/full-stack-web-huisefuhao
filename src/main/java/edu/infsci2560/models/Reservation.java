@@ -34,7 +34,7 @@ public class Reservation {
 
     public Reservation() {
         this.id = Long.MAX_VALUE;
-        this.data = null;
+        this.date = null;
         this.nights = Long.MAX_VALUE;
         this.name = null;
         this.email = null;

@@ -53,13 +53,13 @@ public class RoomsService {
         return new ResponseEntity<>(repository.save(room), headers, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/{id}", method = RequestMethod.PUT, consumes="application/json", produces = "application/json")
+    /*@RequestMapping(value = "/{id}", method = RequestMethod.PUT, consumes="application/json", produces = "application/json")
     public ResponseEntity<Room> update(@RequestBody Room room) {
         HttpHeaders headers = new HttpHeaders();
         return new ResponseEntity<>(repository.save(room), headers, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE, produces = "application/json")
+    /*@RequestMapping(value = "/{id}", method = RequestMethod.DELETE, produces = "application/json")
     public ResponseEntity<Room> delete(@RequestBody Room room) {
         HttpHeaders headers = new HttpHeaders();
         return new ResponseEntity<>(repository.delete(id), headers, HttpStatus.OK);
