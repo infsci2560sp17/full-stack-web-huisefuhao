@@ -42,17 +42,6 @@ public class RoomsController {
         return new ModelAndView("rooms", "rooms", repository.findAll());
     }
 
-    @RequestMapping(value = "rooms/delete", method = RequestMethod.GET)
-    public ModelAndView deleteRoom(@RequestParam(value = "id", required=true) Long id) {
-        Room room = repository.findOne(id);
-        
-        if (room != null) {
-            repository.delete(id);
-        }
-
-        return new ModelAndView("rooms", "rooms", repository.findAll());
-    }
-
     /*@RequestMapping(value = "rooms/delete", method = RequestMethod.GET)
     public ModelAndView delete(@RequestParam(value = "id", required=true) Long id) {
         Room room = repository.findOne(id);
