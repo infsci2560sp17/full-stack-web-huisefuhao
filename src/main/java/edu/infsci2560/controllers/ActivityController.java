@@ -39,7 +39,7 @@ public class ActivityController {
         repository.save(activity);
         return new ModelAndView("activity", "activity", repository.findAll());
     }
-
+/*
     @RequestMapping(value = "activity/update/{id}", method = RequestMethod.PUT, consumes="application/x-www-form-urlencoded", produces = "application/json")
     public ModelAndView update(@ModelAttribute @Valid Activity activity, BindingResult result, @PathVariable("id") long id) {
         if (id != activity.getId()) {
@@ -55,6 +55,6 @@ public class ActivityController {
         return new ModelAndView("activity", "activity", repository.findAll());
     }
 
-
+*/
     
 }

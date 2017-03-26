@@ -39,7 +39,7 @@ public class BreakfastController {
         repository.save(breakfast);
         return new ModelAndView("breakfast", "breakfast", repository.findAll());
     }
-
+/*
     @RequestMapping(value = "breakfast/update/{id}", method = RequestMethod.PUT, consumes="application/x-www-form-urlencoded", produces = "application/json")
     public ModelAndView update(@ModelAttribute @Valid Breakfast breakfast, BindingResult result, @PathVariable("id") long id) {
         if (id != room.getId()) {
@@ -53,5 +53,8 @@ public class BreakfastController {
     public ModelAndView delete(@ModelAttribute @Valid Breakfast breakfast, BindingResult result, @PathVariable("id") long id) {
         repository.delete(id);
         return new ModelAndView("breakfast", "breakfast", repository.findAll());
+
     }
+*/
+
 }

@@ -39,7 +39,7 @@ public class ReservationController {
         repository.save(reservation);
         return new ModelAndView("reservation", "reservation", repository.findAll());
     }
-
+/*
     @RequestMapping(value = "reservation/update/{id}", method = RequestMethod.PUT, consumes="application/x-www-form-urlencoded", produces = "application/json")
     public ModelAndView update(@ModelAttribute @Valid Reservation reservation, BindingResult result, @PathVariable("id") long id) {
         if (id != room.getId()) {
@@ -55,6 +55,6 @@ public class ReservationController {
         return new ModelAndView("reservation", "reservation", repository.findAll());
     }
 
-
+*/
     
 }
