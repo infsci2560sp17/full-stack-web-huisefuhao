@@ -29,25 +29,25 @@ public class FullStackWebApplication {
     public static void main(String[] args) {
         ApplicationContext ctx = SpringApplication.run(FullStackWebApplication.class, args);
 
-        RoomRepository repository = ctx.getBean(RoomRepository.class);
-        repository.save(new Room(1L, "beast", RoomType.Suite, 120L, 60L, 3L, 2L, BedType.King));
-        repository.save(new Room(2L, "cow", RoomType.QueenSizeRoom, 110L, 50L, 2L, 1L, BedType.Queen));
-        repository.save(new Room(3L, "deer", RoomType.Suite, 100L, 55L, 2L, 1L, BedType.King));
+        RoomRepository roomrepository = ctx.getBean(RoomRepository.class);
+        roomrepository.save(new Room(1L, "beast", RoomType.Suite, 120L, 60L, 3L, 2L, BedType.King));
+        roomrepository.save(new Room(2L, "cow", RoomType.QueenSizeRoom, 110L, 50L, 2L, 1L, BedType.Queen));
+        roomrepository.save(new Room(3L, "deer", RoomType.Suite, 100L, 55L, 2L, 1L, BedType.King));
 
-        ActivityRepository repository = ctx.getBean(ActivityRepository.class);
-        repository.save(new Activity(1L, "beast", ActivityType.Unknown, "beast", "beast", "beast"));
-        repository.save(new Activity(2L, "cow", ActivityType.Unknown, "beast", "beast", "beast"));
-        repository.save(new Activity(3L, "deer", ActivityType.Unknown, "beast", "beast", "beast"));
+        ActivityRepository activityrepository = ctx.getBean(ActivityRepository.class);
+        activityrepository.save(new Activity(1L, "beast", ActivityType.Unknown, "beast", "beast", "beast"));
+        activityrepository.save(new Activity(2L, "cow", ActivityType.Unknown, "beast", "beast", "beast"));
+        activityrepository.save(new Activity(3L, "deer", ActivityType.Unknown, "beast", "beast", "beast"));
 
-        BreakfastRepository repository = ctx.getBean(BreakfastRepository.class);
-        repository.save(new Breakfast(1L, "beast", BreakfastType.Unknown, "beast", "beast", "beast"));
-        repository.save(new Breakfast(2L, "cow", BreakfastType.Unknown, "beast", "beast", "beast"));
-        repository.save(new Breakfast(3L, "deer", BreakfastType.Unknown, "beast", "beast", "beast"));
+        BreakfastRepository breakfastepository = ctx.getBean(BreakfastRepository.class);
+        breakfastrepository.save(new Breakfast(1L, "beast", BreakfastType.Unknown, "beast", "beast", "beast"));
+        breakfastrepository.save(new Breakfast(2L, "cow", BreakfastType.Unknown, "beast", "beast", "beast"));
+        breakfastrepository.save(new Breakfast(3L, "deer", BreakfastType.Unknown, "beast", "beast", "beast"));
 
-        ReservationRepository repository = ctx.getBean(ReservationRepository.class);
-        repository.save(new Reservation(1L, "beast", 120L, "beast", "beast"));
-        repository.save(new Reservation(2L, "cow",  110L, "beast", "beast"));
-        repository.save(new Reservation(3L, "deer", 55L, "beast", "beast"));
+        ReservationRepository reservationrepository = ctx.getBean(ReservationRepository.class);
+        reservationrepository.save(new Reservation(1L, "beast", 120L, "beast", "beast"));
+        reservationrepository.save(new Reservation(2L, "cow",  110L, "beast", "beast"));
+        reservationrepository.save(new Reservation(3L, "deer", 55L, "beast", "beast"));
     }
 
 //    @Bean
