@@ -25,6 +25,21 @@ public class FullStackWebApplication {
         repository.save(new Room(1L, "beast", RoomType.Suite, 120L, 60L, 3L, 2L, BedType.King));
         repository.save(new Room(2L, "cow", RoomType.QueenSizeRoom, 110L, 50L, 2L, 1L, BedType.Queen));
         repository.save(new Room(3L, "deer", RoomType.Suite, 100L, 55L, 2L, 1L, BedType.King));
+
+        ActivityRepository repository = ctx.getBean(ActivityRepository.class);
+        repository.save(new Activity(1L, "beast", ActivityType.Unknown, 123, 60L, 3L));
+        repository.save(new Activity(2L, "cow", ActivityType.Unknown, 123, 60L, 3L));
+        repository.save(new Activity(3L, "deer", ActivityType.Unknown, 123, 60L, 3L));
+
+        BreakfastRepository repository = ctx.getBean(BreakfastRepository.class);
+        repository.save(new Breakfast(1L, "beast", BreakfastType.Unknown, 120L, 60L, 3L));
+        repository.save(new Breakfast(2L, "cow", BreakfastType.Unknown, 120L, 60L, 3L));
+        repository.save(new Breakfast(3L, "deer", BreakfastType.Unknown, 120L, 60L, 3L));
+
+        ReservationRepository repository = ctx.getBean(ReservationRepository.class);
+        repository.save(new Reservation(1L, "beast", 120L, 60L, 3L));
+        repository.save(new Reservation(2L, "cow",  110L, 50L, 2L));
+        repository.save(new Reservation(3L, "deer", 55L, 2L, 1L));
     }
 
 //    @Bean
