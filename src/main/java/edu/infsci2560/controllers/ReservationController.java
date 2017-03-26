@@ -29,7 +29,7 @@ public class ReservationController {
     @Autowired
     private ReservationRepository repository;
     
-    @RequestMapping(value = "Reservation", method = RequestMethod.GET)
+    @RequestMapping(value = "reservation", method = RequestMethod.GET)
     public ModelAndView index() {        
         return new ModelAndView("reservation", "reservation", repository.findAll());
     }
