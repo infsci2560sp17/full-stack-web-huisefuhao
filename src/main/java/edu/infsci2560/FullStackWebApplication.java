@@ -39,7 +39,7 @@ public class FullStackWebApplication {
         activityrepository.save(new Activity(2L, "cow", ActivityType.Unknown, "beast", "beast", "beast"));
         activityrepository.save(new Activity(3L, "deer", ActivityType.Unknown, "beast", "beast", "beast"));
 
-        BreakfastRepository breakfastepository = ctx.getBean(BreakfastRepository.class);
+        BreakfastRepository breakfastrepository = ctx.getBean(BreakfastRepository.class);
         breakfastrepository.save(new Breakfast(1L, "beast", BreakfastType.Unknown, "beast", "beast", "beast"));
         breakfastrepository.save(new Breakfast(2L, "cow", BreakfastType.Unknown, "beast", "beast", "beast"));
         breakfastrepository.save(new Breakfast(3L, "deer", BreakfastType.Unknown, "beast", "beast", "beast"));
