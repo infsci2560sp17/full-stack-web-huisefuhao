@@ -39,5 +39,22 @@ public class RoomsController {
         repository.save(room);
         return new ModelAndView("rooms", "rooms", repository.findAll());
     }
+
+    @RequestMapping(value = "rooms/update/{id}", method = RequestMethod.PUT, consumes="application/x-www-form-urlencoded", produces = "application/json")
+    public ModelAndView update(@ModelAttribute @Valid Room room, BindingResult result, @PathVariable("id") long id) {
+        if (id != room.getId()) {
+            repository.delete(id);
+        }
+        repository.save(room);
+        return new ModelAndView("rooms", "rooms", repository.findAll());
+    }
+
+    @RequestMapping(value = "rooms/delete/{id}", method = RequestMethod.DELETE, consumes="application/x-www-form-urlencoded", produces = "application/json")
+    public ModelAndView delete(@ModelAttribute @Valid Room room, BindingResult result, @PathVariable("id") long id) {
+        repository.delete(id);
+        return new ModelAndView("rooms", "rooms", repository.findAll());
+    }
+
+
     
 }

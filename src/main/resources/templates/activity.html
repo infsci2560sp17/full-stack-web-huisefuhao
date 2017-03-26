@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User Home</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
+        <script scr="js/jquery-3.1.1.min.js"></script>
+        <script scr="js/bootstrap.min.js"></script>
+        <script scr="js/script.js"></script>
+    </head>
+    <body>
+        <div id="div1"><img src="northlight.jpg" /></div>
+        <h1 data-th-inline="text">ACTIVITY's INFORMATION</h1>
+
+        <div>
+            <table style="border: 1px solid black">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Activity Type</th>
+                    <th>Description</th>
+                    <th>Time</th>
+                    <th>Location</th>
+
+                </tr>
+                <tr data-th-each="activity : ${activity}">
+                    <td data-th-text="${activity.id}"></td>
+                    <td data-th-text="${activity.name}"></td>
+                    <td data-th-text="${activity.activityType}"></td>
+                    <td data-th-text="${room.description}"></td>
+                    <td data-th-text="${room.time}"></td>
+                    <td data-th-text="${room.location}"></td>
+                </tr>
+            </table>
+        </div>
+        
+        <hr />
+        Add ACTIVITY<br/>
+        <form data-th-action="@{/activity/add}" name="addActivityForm" method="post">
+            Name: <input type="text" name="name"/><br />
+            Activity Type:<br/>
+            <input type="radio" name="activityType" value="Unknown" checked="checked" /> Unknown<br />
+            <input type="radio" name="activityType" value="Indoor" /> Indoor activity<br />
+            <input type="radio" name="roomType" value="Outdoor" /> Outdoor activity<br />
+            Description: <input type="text" name="description" /><br />
+            Time: <input type="text" name="time" /><br/>
+            Location: <input type="text" name="description" /><br />
+            <input type="submit" value="Add Activity"/>
+        </form>
+        <hr /> 
+
+        <a data-th-href="@{/nav}">HomePage</a>
+    </body>
+</html>

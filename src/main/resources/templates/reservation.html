@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Reservation</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
+        <script scr="js/jquery-3.1.1.min.js"></script>
+        <script scr="js/bootstrap.min.js"></script>
+        <script scr="js/script.js"></script>
+    </head>
+    <body>
+        <div id="div1"><img src="northlight.jpg" /></div>
+        <h1 data-th-inline="text">RESERVATION's INFORMATION</h1>
+
+        <div>
+            <table style="border: 1px solid black">
+                <tr>
+                    <th>ID</th>
+                    <th>Date</th>
+                    <th>Nights</th>
+                    <th>CustomerName</th>
+                    <th>Email</th>
+
+                </tr>
+                <tr data-th-each="reservation : ${reservation}">
+                    <td data-th-text="${reservation.id}"></td>
+                    <td data-th-text="${reservation.date}"></td>
+                    <td data-th-text="${reservation.nights}"></td>
+                    <td data-th-text="${reservation.customerName}"></td>
+                    <td data-th-text="${reservation.email}"></td>
+                </tr>
+            </table>
+        </div>
+        
+        <hr />
+        Add Reservation<br />
+        <form data-th-action="@{/reservation/add}" name="addReservationForm" method="post">
+            Date: <input type="text" name="date" /><br />
+            Nights: <input type="text" name="nights" /><br />
+            Name: <input type="text" name="customerName" /><br />
+            Email: <input type="text" name="email" /><br />
+            <input type="submit" value="Add Reservation"/>
+        </form>
+        
+        <hr />       
+        <a data-th-href="@{/nav}">HomePage</a>
+    </body>
+</html>

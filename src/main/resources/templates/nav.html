@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome!</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
+        <script scr="js/jquery-3.1.1.min.js"></script>
+        <script scr="js/bootstrap.min.js"></script>
+        <script scr="js/script.js"></script>
+    </head>
+    <body>
+        <div id="div1"><img src="northlight.jpg" /></div> 
+        <ul id="nav"> 
+        <li><a data-th-href="@{/rooms}">Room</a></li>
+        <li><a data-th-href="@{/activity}">Activity</a></li>
+        <li><a data-th-href="@{/breakfast}">Breakfast</a></li>
+        <li><a data-th-href="@{/reservation}">Booking</a></li>
+        <li>
+            <form data-th-action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+            </form>
+        </li>
+        </ul>
+        <div>
+        This the main part
+        </div>
+    </body>
+</html>

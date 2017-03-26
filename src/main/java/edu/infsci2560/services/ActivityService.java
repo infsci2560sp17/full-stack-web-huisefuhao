@@ -5,10 +5,9 @@
  */
 package edu.infsci2560.services;
 
-import edu.infsci2560.models.Room;
-import edu.infsci2560.models.Room.RoomType;
-import edu.infsci2560.models.Room.BedType;
-import edu.infsci2560.repositories.RoomRepository;
+import edu.infsci2560.models.Activity;
+import edu.infsci2560.models.Activity.ActivityType;
+import edu.infsci2560.repositories.ActivityRepository;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -29,50 +28,56 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @author Neil
  */
 @RestController
-@RequestMapping("/public/api/rooms")
-public class RoomsService {
+@RequestMapping("/public/api/activity")
+public class ActivityService {
 
     @Autowired
-    private RoomRepository repository;
+    private ActivityRepository repository;
 
     @RequestMapping(method = RequestMethod.GET, produces = "application/json")
-    public ResponseEntity<Iterable<Room>> list() {
+    public ResponseEntity<Iterable<Activity>> list() {
         HttpHeaders headers = new HttpHeaders();
         return new ResponseEntity<>(repository.findAll(), headers, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = "application/json")
-    public ResponseEntity<Room> list(@PathVariable("id") Long id) {
+    public ResponseEntity<Activity> list(@PathVariable("id") Long id) {
         HttpHeaders headers = new HttpHeaders();
         return new ResponseEntity<>(repository.findOne(id), headers, HttpStatus.OK);
     }
 
     @RequestMapping(method = RequestMethod.POST, consumes="application/json", produces = "application/json")
-    public ResponseEntity<Room> create(@RequestBody Room room) {
+    public ResponseEntity<Activity> create(@RequestBody Activity activity) {
         HttpHeaders headers = new HttpHeaders();
-        return new ResponseEntity<>(repository.save(room), headers, HttpStatus.OK);
+        return new ResponseEntity<>(repository.save(activity), headers, HttpStatus.OK);
     }
 
     /*@RequestMapping(method = RequestMethod.PUT, consumes="application/json", produces = "application/json")
-    public ResponseEntity<Room> create(@RequestBody Room room) {
+    public ResponseEntity<Activity> create(@RequestBody Activity activity) {
         HttpHeaders headers = new HttpHeaders();
-        return new ResponseEntity<>(repository.save(room), headers, HttpStatus.OK);
+        return new ResponseEntity<>(repository.save(activity), headers, HttpStatus.OK);
     }
 
+    /*@RequestMapping(value = "/{id}", method = RequestMethod.DELETE, produces = "application/json")
+    public ResponseEntity<Reservation> delete(@PathVariable("id") Long id) {
+        HttpHeaders headers = new HttpHeaders();
+        return new ResponseEntity<>(repository.delete(id), headers, HttpStatus.OK);
+    }
+    
+
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-    public ResponseEntity<Room> delete(@PathVariable("id") Long id) {
+    public ResponseEntity<Activity> delete(@PathVariable("id") Long id) {
         repository.delete(id);
     }
     */
-
     @RequestMapping(value = "/{id}", method = RequestMethod.PUT, consumes = "application/json")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @Transactional
-    public void update(@RequestBody Room room, @PathVariable("id") long id) throws IOException {
-        if (id != room.getId()) {
+    public void update(@RequestBody Activity activity, @PathVariable("id") long id) throws IOException {
+        if (id != activity.getId()) {
             repository.delete(id);
         }
-        repository.save(room);
+        repository.save(activity);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)

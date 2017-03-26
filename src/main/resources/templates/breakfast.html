@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Breakfast</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
+        <script scr="js/jquery-3.1.1.min.js"></script>
+        <script scr="js/bootstrap.min.js"></script>
+        <script scr="js/script.js"></script>
+    </head>
+    <body>
+        <div id="div1"><img src="northlight.jpg" /></div>
+        <h1 data-th-inline="text">BREAKFAST's INFORMATION</h1>
+
+        <div>
+            <table style="border: 1px solid black">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Breakfast Type</th>
+                    <th>Description</th>
+                    <th>Food</th>
+                    <th>Beverage</th>
+
+                </tr>
+                <tr data-th-each="breakfast : ${breakfast}">
+                    <td data-th-text="${breakfast.id}"></td>
+                    <td data-th-text="${breakfast.name}"></td>
+                    <td data-th-text="${breakfast.breakfastType}"></td>
+                    <td data-th-text="${breakfast.description}"></td>
+                    <td data-th-text="${breakfast.food}"></td>
+                    <td data-th-text="${breakfast.beverage}"></td>
+                </tr>
+            </table>
+        </div>
+        
+        <hr />
+        Add Breakfast<br />
+        <form data-th-action="@{/breakfast/add}" name="addBreakfastForm" method="post">
+            Name: <input type="text" name="name" /><br />
+            Room Type:<br />
+            <input type="radio" name="breakfastType" value="Unknown" checked="checked" /> Unknown<br />
+            <input type="radio" name="breakfastType" value="AmericanStyle" />American<br />
+            <input type="radio" name="breakfastType" value="ChineseStyle" />Chinese<br />
+            Description: <input type="text" name="description" /><br />
+            Food: <input type="text" name="food" /><br />
+            Beverage: <input type="text" name="beverage" /><br />
+            <input type="submit" value="Add Breakfast"/>
+        </form>
+        
+        <hr />       
+        <a data-th-href="@{/nav}">HomePage</a>
+    </body>
+</html>

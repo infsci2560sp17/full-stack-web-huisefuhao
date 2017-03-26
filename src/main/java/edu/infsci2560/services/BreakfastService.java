@@ -5,10 +5,9 @@
  */
 package edu.infsci2560.services;
 
-import edu.infsci2560.models.Room;
-import edu.infsci2560.models.Room.RoomType;
-import edu.infsci2560.models.Room.BedType;
-import edu.infsci2560.repositories.RoomRepository;
+import edu.infsci2560.models.Breakfast;
+import edu.infsci2560.models.Breakfast.BreakfastType;
+import edu.infsci2560.repositories.BreakfastRepository;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -29,50 +28,56 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @author Neil
  */
 @RestController
-@RequestMapping("/public/api/rooms")
-public class RoomsService {
+@RequestMapping("/public/api/breakfast")
+public class BreakfastService {
 
     @Autowired
-    private RoomRepository repository;
+    private BreakfastRepository repository;
 
     @RequestMapping(method = RequestMethod.GET, produces = "application/json")
-    public ResponseEntity<Iterable<Room>> list() {
+    public ResponseEntity<Iterable<Breakfast>> list() {
         HttpHeaders headers = new HttpHeaders();
         return new ResponseEntity<>(repository.findAll(), headers, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = "application/json")
-    public ResponseEntity<Room> list(@PathVariable("id") Long id) {
+    public ResponseEntity<Breakfast> list(@PathVariable("id") Long id) {
         HttpHeaders headers = new HttpHeaders();
         return new ResponseEntity<>(repository.findOne(id), headers, HttpStatus.OK);
     }
 
     @RequestMapping(method = RequestMethod.POST, consumes="application/json", produces = "application/json")
-    public ResponseEntity<Room> create(@RequestBody Room room) {
+    public ResponseEntity<Breakfast> create(@RequestBody Breakfast breakfast) {
         HttpHeaders headers = new HttpHeaders();
-        return new ResponseEntity<>(repository.save(room), headers, HttpStatus.OK);
+        return new ResponseEntity<>(repository.save(breakfast), headers, HttpStatus.OK);
     }
 
     /*@RequestMapping(method = RequestMethod.PUT, consumes="application/json", produces = "application/json")
-    public ResponseEntity<Room> create(@RequestBody Room room) {
+    public ResponseEntity<Breakfast> create(@RequestBody Breakfast breakfast) {
         HttpHeaders headers = new HttpHeaders();
-        return new ResponseEntity<>(repository.save(room), headers, HttpStatus.OK);
+        return new ResponseEntity<>(repository.save(breakfast), headers, HttpStatus.OK);
     }
 
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE, produces = "application/json")
+    public ResponseEntity<Reservation> delete(@PathVariable("id") Long id) {
+        HttpHeaders headers = new HttpHeaders();
+        return new ResponseEntity<>(repository.delete(id), headers, HttpStatus.OK);
+    }
+    
+
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-    public ResponseEntity<Room> delete(@PathVariable("id") Long id) {
+    public ResponseEntity<Breakfast> delete(@PathVariable("id") Long id) {
         repository.delete(id);
     }
     */
-
     @RequestMapping(value = "/{id}", method = RequestMethod.PUT, consumes = "application/json")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @Transactional
-    public void update(@RequestBody Room room, @PathVariable("id") long id) throws IOException {
-        if (id != room.getId()) {
+    public void update(@RequestBody Breakfast breakfast, @PathVariable("id") long id) throws IOException {
+        if (id != breakfast.getId()) {
             repository.delete(id);
         }
-        repository.save(room);
+        repository.save(breakfast);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
@@ -80,4 +85,5 @@ public class RoomsService {
     public void delete(@PathVariable("id") long id) {
         repository.delete(id);
     }
+    
 }
