@@ -41,10 +41,10 @@ public class ReservationController {
     }
 
     @RequestMapping(value = "reservation/delete", method = RequestMethod.GET)
-    public ModelAndView deletereservation(@RequestParam(value = "id", required=true) Long id) {
+    public ModelAndView delete(@RequestParam(value = "id", required=true) Long id) {
         Reservation reservation = repository.findOne(id);
         
-        if (room != null) {
+        if (reservation != null) {
             repository.delete(id);
         }
 
