@@ -28,7 +28,7 @@ public class Reservation {
     protected Long id;
     protected String date;
     protected long nights;
-    protected String customerName;
+    protected String name;
     protected String email;
 
 
@@ -36,15 +36,15 @@ public class Reservation {
         this.id = Long.MAX_VALUE;
         this.data = null;
         this.nights = Long.MAX_VALUE;
-        this.customerName = null;
+        this.name = null;
         this.email = null;
     }
 
-    public Activity(Long id, String date, long nights, String customerName, String email) {
+    public Activity(Long id, String date, long nights, String name, String email) {
         this.id = id;
         this.date = date;
         this.nights = nights;
-        this.customerName = customerName;
+        this.name = name;
         this.email = email;
     }
 
@@ -112,14 +112,14 @@ public class Reservation {
      * @return the price
      */
     public String getName() {
-        return customerName;
+        return name;
     }
 
     /**
      * @param price to set
      */
-    public void setName(String customerName) {
-        this.customerName = customerName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     /**

@@ -26,7 +26,7 @@
                     <td data-th-text="${reservation.id}"></td>
                     <td data-th-text="${reservation.date}"></td>
                     <td data-th-text="${reservation.nights}"></td>
-                    <td data-th-text="${reservation.customerName}"></td>
+                    <td data-th-text="${reservation.name}"></td>
                     <td data-th-text="${reservation.email}"></td>
                 </tr>
             </table>
@@ -37,7 +37,7 @@
         <form data-th-action="@{/reservation/add}" name="addReservationForm" method="post">
             Date: <input type="text" name="date" /><br />
             Nights: <input type="text" name="nights" /><br />
-            Name: <input type="text" name="customerName" /><br />
+            Name: <input type="text" name="name" /><br />
             Email: <input type="text" name="email" /><br />
             <input type="submit" value="Add Reservation"/>
         </form>
