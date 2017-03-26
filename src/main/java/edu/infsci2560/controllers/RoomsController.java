@@ -41,13 +41,11 @@ public class RoomsController {
     }
 
     @RequestMapping(value = "rooms/delete/{id}", method = RequestMethod.DELETE)
-    public ModelAndView delete(@RequestParam(value = "id", required=true) Long id) {
+    public ModelAndView delete(@PathVariable("id") Long id) {
         Room room = repository.findOne(id);
-        
         if (room != null) {
             repository.delete(id);
         }
-
         return new ModelAndView("rooms", "rooms", repository.findAll());
     }
 }
