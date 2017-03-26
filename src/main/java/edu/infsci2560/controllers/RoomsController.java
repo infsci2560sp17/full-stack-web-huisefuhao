@@ -6,6 +6,8 @@
 package edu.infsci2560.controllers;
 
 import edu.infsci2560.models.Room;
+import edu.infsci2560.models.Room.RoomType;
+import edu.infsci2560.models.Room.BedType;
 import edu.infsci2560.repositories.RoomRepository;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,12 +42,26 @@ public class RoomsController {
         return new ModelAndView("rooms", "rooms", repository.findAll());
     }
 
-    @RequestMapping(value = "rooms/delete/{id}", method = RequestMethod.DELETE)
-    public ModelAndView delete(@PathVariable("id") Long id) {
+    /*@RequestMapping(value = "rooms/delete", method = RequestMethod.GET)
+    public ModelAndView delete(@RequestParam(value = "id", required=true) Long id) {
         Room room = repository.findOne(id);
+        
         if (room != null) {
             repository.delete(id);
         }
+
         return new ModelAndView("rooms", "rooms", repository.findAll());
     }
+    
+    @RequestMapping(value = "/rooms/put", method = RequestMethod.PUT)
+    public ModelAndView update(@RequestParam("id") Long id, @RequestParam("name") String name, @RequestParam("comment") String comment, @RequestParam("comment") String comment, @RequestParam("comment") String comment, @RequestParam("comment") String comment, @RequestParam("comment") String comment, @RequestParam("comment") String comment, @RequestParam("comment") String comment) {
+        Room room = repository.findOne(id);
+        room.setComment(comment);
+
+        return new ModelAndView("rooms", "rooms", repository.findAll());
+    }
+    */
+
+
+
 }

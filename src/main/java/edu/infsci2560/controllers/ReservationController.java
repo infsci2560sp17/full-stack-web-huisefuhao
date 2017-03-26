@@ -39,6 +39,28 @@ public class ReservationController {
         repository.save(reservation);
         return new ModelAndView("reservation", "reservation", repository.findAll());
     }
+
+    @RequestMapping(value = "reservation/delete", method = RequestMethod.GET)
+    public ModelAndView delete(@RequestParam(value = "id", required=true) Long id) {
+        Reservation reservation = repository.findOne(id);
+        
+        if (room != null) {
+            repository.delete(id);
+        }
+
+        return new ModelAndView("reservation", "reservation", repository.findAll());
+    }
+    
+    @RequestMapping(value = "/reservation/put", method = RequestMethod.PUT)
+    public ModelAndView update(@RequestParam("id") Long id, @RequestParam("date") String date, @RequestParam("nights") Long nights, @RequestParam("name") String name, @RequestParam("email") String emial) {
+        Reservation reservation = repository.findOne(id);
+        reservation.setDate(date);
+        reservation.setNights(nights);
+        reservation.setName(name);
+        reservation.setEmail(email);
+
+        return new ModelAndView("reservation", "reservation", repository.findAll());
+    }
 /*
     @RequestMapping(value = "reservation/update/{id}", method = RequestMethod.PUT, consumes="application/x-www-form-urlencoded", produces = "application/json")
     public ModelAndView update(@ModelAttribute @Valid Reservation reservation, BindingResult result, @PathVariable("id") long id) {
