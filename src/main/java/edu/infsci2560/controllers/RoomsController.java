@@ -36,32 +36,23 @@ public class RoomsController {
         return new ModelAndView("rooms", "rooms", repository.findAll());
     }
     
+    @RequestMapping(value = "rooms/{id}", method = RequestMethod.GET)
+    public ModelAndView index(@PathVariable Long id) {        
+        return new ModelAndView("rooms", "rooms", repository.findOne(id));
+    }
+
     @RequestMapping(value = "rooms/add", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
     public ModelAndView create(@ModelAttribute @Valid Room room, BindingResult result) {
         repository.save(room);
         return new ModelAndView("rooms", "rooms", repository.findAll());
     }
 
-    /*@RequestMapping(value = "rooms/delete", method = RequestMethod.GET)
-    public ModelAndView delete(@RequestParam(value = "id", required=true) Long id) {
-        Room room = repository.findOne(id);
-        
-        if (room != null) {
-            repository.delete(id);
-        }
-
+    @RequestMapping(value = "rooms/{id}", 
+            method = RequestMethod.DELETE, 
+            consumes="application/x-www-form-urlencoded", 
+            produces = "application/json")
+    public ModelAndView delete( @Valid Room rooms, BindingResult result) {
+        repository.delete(rooms);
         return new ModelAndView("rooms", "rooms", repository.findAll());
     }
-    
-    @RequestMapping(value = "/rooms/put", method = RequestMethod.PUT)
-    public ModelAndView update(@RequestParam("id") Long id, @RequestParam("name") String name, @RequestParam("comment") String comment, @RequestParam("comment") String comment, @RequestParam("comment") String comment, @RequestParam("comment") String comment, @RequestParam("comment") String comment, @RequestParam("comment") String comment, @RequestParam("comment") String comment) {
-        Room room = repository.findOne(id);
-        room.setComment(comment);
-
-        return new ModelAndView("rooms", "rooms", repository.findAll());
-    }
-    */
-
-
-
 }

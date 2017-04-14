@@ -33,6 +33,11 @@ public class ReservationController {
     public ModelAndView index() {        
         return new ModelAndView("reservation", "reservation", repository.findAll());
     }
+
+    @RequestMapping(value = "reservation/{id}", method = RequestMethod.GET)
+    public ModelAndView index(@PathVariable Long id) {        
+        return new ModelAndView("reservation", "reservation", repository.findOne(id));
+    }
     
     @RequestMapping(value = "reservation/add", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
     public ModelAndView create(@ModelAttribute @Valid Reservation reservation, BindingResult result) {
@@ -40,68 +45,12 @@ public class ReservationController {
         return new ModelAndView("reservation", "reservation", repository.findAll());
     }
 
-    @RequestMapping(value = "reservation/delete", method = RequestMethod.GET)
-    public ModelAndView delete(@RequestParam(value="id", required=true) Long id) {
-        Reservation reservation = repository.findOne(id);
-        
-        if (reservation != null) {
-            repository.delete(id);
-        }
-
+    @RequestMapping(value = "reservation/{id}", 
+            method = RequestMethod.DELETE, 
+            consumes="application/x-www-form-urlencoded", 
+            produces = "application/json")
+    public ModelAndView delete( @Valid Reservation reservation, BindingResult result) {
+        repository.delete(reservation);
         return new ModelAndView("reservation", "reservation", repository.findAll());
     }
-
-    @RequestMapping(value = "reservation/delete/{id}", method = RequestMethod.GET)
-    public ModelAndView deleteRoom(@PathVariable Integer id, final RedirectAttributes redirectAttributes) throws RoomNotFound {
-
-        Reservation reservation = repository.findOne(id);
-        
-        if (reservation != null) {
-            repository.delete(id);
-        }
-
-        return new ModelAndView("reservation", "reservation", repository.findAll());
-    }
-
-    @RequestMapping(value = "reservation/delete/{id}", method = RequestMethod.GET)
-    public ModelAndView delete(@PathVariable Integer id, final RedirectAttributes redirectAttributes) throws RoomNotFound {
-
-        Dvd dvd = repository.findOne(id);
-        
-        if ( dvd != null ) {
-            //log.info("*** recipe is not null");
-            repository.delete(dvd);
-        }
-
-        return new ModelAndView("dvds", "dvds", repository.findOne(id));
-    }
-    /*
-    @RequestMapping(value = "/reservation/put", method = RequestMethod.PUT)
-    public ModelAndView update(@RequestParam("id") Long id, @RequestParam("date") String date, @RequestParam("nights") Long nights, @RequestParam("name") String name, @RequestParam("email") String emial) {
-        Reservation reservation = repository.findOne(id);
-        reservation.setDate(date);
-        reservation.setNights(nights);
-        reservation.setName(name);
-        reservation.setEmail(email);
-
-        return new ModelAndView("reservation", "reservation", repository.findAll());
-    }
-/*
-    @RequestMapping(value = "reservation/update/{id}", method = RequestMethod.PUT, consumes="application/x-www-form-urlencoded", produces = "application/json")
-    public ModelAndView update(@ModelAttribute @Valid Reservation reservation, BindingResult result, @PathVariable("id") long id) {
-        if (id != room.getId()) {
-            repository.delete(id);
-        }
-        repository.save(reservation);
-        return new ModelAndView("reservation", "reservation", repository.findAll());
-    }
-
-    @RequestMapping(value = "reservation/delete/{id}", method = RequestMethod.DELETE, consumes="application/x-www-form-urlencoded", produces = "application/json")
-    public ModelAndView delete(@ModelAttribute @Valid Reservation reservation, BindingResult result, @PathVariable("id") long id) {
-        repository.delete(id);
-        return new ModelAndView("reservation", "reservation", repository.findAll());
-    }
-
-*/
-    
 }

@@ -51,39 +51,4 @@ public class ActivityService {
         HttpHeaders headers = new HttpHeaders();
         return new ResponseEntity<>(repository.save(activity), headers, HttpStatus.OK);
     }
-
-    /*@RequestMapping(method = RequestMethod.PUT, consumes="application/json", produces = "application/json")
-    public ResponseEntity<Activity> create(@RequestBody Activity activity) {
-        HttpHeaders headers = new HttpHeaders();
-        return new ResponseEntity<>(repository.save(activity), headers, HttpStatus.OK);
-    }
-
-    /*@RequestMapping(value = "/{id}", method = RequestMethod.DELETE, produces = "application/json")
-    public ResponseEntity<Reservation> delete(@PathVariable("id") Long id) {
-        HttpHeaders headers = new HttpHeaders();
-        return new ResponseEntity<>(repository.delete(id), headers, HttpStatus.OK);
-    }
-    
-
-    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-    public ResponseEntity<Activity> delete(@PathVariable("id") Long id) {
-        repository.delete(id);
-    }
-    */
-    /*@RequestMapping(value = "/{id}", method = RequestMethod.PUT, consumes = "application/json")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    @Transactional
-    public void update(@RequestBody Activity activity, @PathVariable("id") long id) throws IOException {
-        if (id != activity.getId()) {
-            repository.delete(id);
-        }
-        repository.save(activity);
-    }
-
-    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void delete(@PathVariable("id") long id) {
-        repository.delete(id);
-    }
-    */
 }

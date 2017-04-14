@@ -33,28 +33,25 @@ public class ActivityController {
     public ModelAndView index() {        
         return new ModelAndView("activity", "activity", repository.findAll());
     }
+
+    @RequestMapping(value = "activity/{id}", method = RequestMethod.GET)
+    public ModelAndView index(@PathVariable Long id) {        
+        return new ModelAndView("activity", "activity", repository.findOne(id));
+    }
     
     @RequestMapping(value = "activity/add", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
     public ModelAndView create(@ModelAttribute @Valid Activity activity, BindingResult result) {
         repository.save(activity);
         return new ModelAndView("activity", "activity", repository.findAll());
     }
-/*
-    @RequestMapping(value = "activity/update/{id}", method = RequestMethod.PUT, consumes="application/x-www-form-urlencoded", produces = "application/json")
-    public ModelAndView update(@ModelAttribute @Valid Activity activity, BindingResult result, @PathVariable("id") long id) {
-        if (id != activity.getId()) {
-            repository.delete(id);
-        }
-        repository.save(activity);
+
+    @RequestMapping(value = "activity/{id}", 
+            method = RequestMethod.DELETE, 
+            consumes="application/x-www-form-urlencoded", 
+            produces = "application/json")
+    public ModelAndView delete( @Valid Activity activity, BindingResult result) {
+        repository.delete(activity);
         return new ModelAndView("activity", "activity", repository.findAll());
     }
 
-    @RequestMapping(value = "activity/delete/{id}", method = RequestMethod.DELETE, consumes="application/x-www-form-urlencoded", produces = "application/json")
-    public ModelAndView delete(@ModelAttribute @Valid Activity activity, BindingResult result, @PathVariable("id") long id) {
-        repository.delete(id);
-        return new ModelAndView("activity", "activity", repository.findAll());
-    }
-
-*/
-    
 }

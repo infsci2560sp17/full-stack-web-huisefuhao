@@ -51,40 +51,4 @@ public class BreakfastService {
         HttpHeaders headers = new HttpHeaders();
         return new ResponseEntity<>(repository.save(breakfast), headers, HttpStatus.OK);
     }
-
-    /*@RequestMapping(method = RequestMethod.PUT, consumes="application/json", produces = "application/json")
-    public ResponseEntity<Breakfast> create(@RequestBody Breakfast breakfast) {
-        HttpHeaders headers = new HttpHeaders();
-        return new ResponseEntity<>(repository.save(breakfast), headers, HttpStatus.OK);
-    }
-
-    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE, produces = "application/json")
-    public ResponseEntity<Reservation> delete(@PathVariable("id") Long id) {
-        HttpHeaders headers = new HttpHeaders();
-        return new ResponseEntity<>(repository.delete(id), headers, HttpStatus.OK);
-    }
-    
-
-    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-    public ResponseEntity<Breakfast> delete(@PathVariable("id") Long id) {
-        repository.delete(id);
-    }
-    */
-    /*@RequestMapping(value = "/{id}", method = RequestMethod.PUT, consumes = "application/json")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    @Transactional
-    public void update(@RequestBody Breakfast breakfast, @PathVariable("id") long id) throws IOException {
-        if (id != breakfast.getId()) {
-            repository.delete(id);
-        }
-        repository.save(breakfast);
-    }
-
-    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void delete(@PathVariable("id") long id) {
-        repository.delete(id);
-    }
-    */
-    
 }

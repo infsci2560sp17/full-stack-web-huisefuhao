@@ -33,28 +33,24 @@ public class BreakfastController {
     public ModelAndView index() {        
         return new ModelAndView("breakfast", "breakfast", repository.findAll());
     }
+
+    @RequestMapping(value = "breakfast/{id}", method = RequestMethod.GET)
+    public ModelAndView index(@PathVariable Long id) {        
+        return new ModelAndView("breakfast", "breakfast", repository.findOne(id));
+    }
     
     @RequestMapping(value = "breakfast/add", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
     public ModelAndView create(@ModelAttribute @Valid Breakfast breakfast, BindingResult result) {
         repository.save(breakfast);
         return new ModelAndView("breakfast", "breakfast", repository.findAll());
     }
-/*
-    @RequestMapping(value = "breakfast/update/{id}", method = RequestMethod.PUT, consumes="application/x-www-form-urlencoded", produces = "application/json")
-    public ModelAndView update(@ModelAttribute @Valid Breakfast breakfast, BindingResult result, @PathVariable("id") long id) {
-        if (id != room.getId()) {
-            repository.delete(id);
-        }
-        repository.save(breakfast);
+
+    @RequestMapping(value = "breakfast/{id}", 
+            method = RequestMethod.DELETE, 
+            consumes="application/x-www-form-urlencoded", 
+            produces = "application/json")
+    public ModelAndView delete( @Valid Breakfast breakfast, BindingResult result) {
+        repository.delete(breakfast);
         return new ModelAndView("breakfast", "breakfast", repository.findAll());
     }
-
-    @RequestMapping(value = "breakfast/delete/{id}", method = RequestMethod.DELETE, consumes="application/x-www-form-urlencoded", produces = "application/json")
-    public ModelAndView delete(@ModelAttribute @Valid Breakfast breakfast, BindingResult result, @PathVariable("id") long id) {
-        repository.delete(id);
-        return new ModelAndView("breakfast", "breakfast", repository.findAll());
-
-    }
-*/
-
 }

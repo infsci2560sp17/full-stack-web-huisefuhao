@@ -52,45 +52,4 @@ public class RoomsService {
         HttpHeaders headers = new HttpHeaders();
         return new ResponseEntity<>(repository.save(room), headers, HttpStatus.OK);
     }
-
-    /*@RequestMapping(value = "/{id}", method = RequestMethod.PUT, consumes="application/json", produces = "application/json")
-    public ResponseEntity<Room> update(@RequestBody Room room) {
-        HttpHeaders headers = new HttpHeaders();
-        return new ResponseEntity<>(repository.save(room), headers, HttpStatus.OK);
-    }
-
-    /*@RequestMapping(value = "/{id}", method = RequestMethod.DELETE, produces = "application/json")
-    public ResponseEntity<Room> delete(@RequestBody Room room) {
-        HttpHeaders headers = new HttpHeaders();
-        return new ResponseEntity<>(repository.delete(id), headers, HttpStatus.OK);
-    }
-
-    /*@RequestMapping(method = RequestMethod.PUT, consumes="application/json", produces = "application/json")
-    public ResponseEntity<Room> create(@RequestBody Room room) {
-        HttpHeaders headers = new HttpHeaders();
-        return new ResponseEntity<>(repository.save(room), headers, HttpStatus.OK);
-    }
-
-    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-    public ResponseEntity<Room> delete(@PathVariable("id") Long id) {
-        repository.delete(id);
-    }
-    */
-
-    /*@RequestMapping(value = "/{id}", method = RequestMethod.PUT, consumes = "application/json")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    @Transactional
-    public void update(@RequestBody Room room, @PathVariable("id") long id) throws IOException {
-        if (id != room.getId()) {
-            repository.delete(id);
-        }
-        repository.save(room);
-    }
-
-    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void delete(@PathVariable("id") long id) {
-        repository.delete(id);
-    }
-    */
 }
