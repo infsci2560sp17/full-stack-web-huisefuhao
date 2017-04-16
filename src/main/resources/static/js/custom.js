@@ -15,7 +15,7 @@
     "use strict";
     var mainApp = {
 
-        main_fun: function () {
+        mainFun: function () {
             /*====================================
                SLIDER SCRIPTS
                ======================================*/
@@ -66,7 +66,7 @@
         },
 
         initialization: function () {
-            mainApp.main_fun();
+            mainApp.mainFun();
 
         }
 
@@ -74,7 +74,7 @@
     // Initializing ///
 
     $(document).ready(function () {
-        mainApp.main_fun();
+        mainApp.mainFun();
     });
 
 }(jQuery));
