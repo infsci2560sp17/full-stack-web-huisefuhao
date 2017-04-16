@@ -41,9 +41,9 @@
             $(function () {
                 $.vegas('slideshow', {
                     backgrounds: [
-                      { src: "http://pic1.win4000.com/wallpaper/b/52d3524c8a3f6.jpg", fade: 1000, delay: 9000 }, 
-                      { src: "http://pic1.win4000.com/wallpaper/b/52d3526abf768.jpg", fade: 1000, delay: 9000 }, 
-                      { src: "http://pic1.win4000.com/wallpaper/b/52d35265ae22b.jpg", fade: 1000, delay: 9000 }, 
+                      { src: "https://pic1.win4000.com/wallpaper/b/52d3524c8a3f6.jpg", fade: 1000, delay: 9000 }, 
+                      { src: "https://pic1.win4000.com/wallpaper/b/52d3526abf768.jpg", fade: 1000, delay: 9000 }, 
+                      { src: "https://pic1.win4000.com/wallpaper/b/52d35265ae22b.jpg", fade: 1000, delay: 9000 }, 
                         
                      
                     ]
