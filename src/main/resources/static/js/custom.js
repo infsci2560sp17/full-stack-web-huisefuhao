@@ -41,9 +41,9 @@
             $(function () {
                 $.vegas('slideshow', {
                     backgrounds: [
-                      { th:src="@{/img/1.jpg}", src: '../img/1.jpg',fade: 1000, delay: 9000 }, 
-                      { src: '../img/2.jpg', fade: 1000, delay: 9000 }, 
-                      { src: '../img/3.jpg', fade: 1000, delay: 9000 }, 
+                      { src: '../../img/1.jpg', fade: 1000, delay: 9000 }, 
+                      { src: '../../img/2.jpg', fade: 1000, delay: 9000 }, 
+                      { src: '../../img/3.jpg', fade: 1000, delay: 9000 }, 
                         
                      
                     ]
