@@ -41,9 +41,11 @@
             $(function () {
                 $.vegas('slideshow', {
                     backgrounds: [
-                      { src: '1.jpg', fade: 1000, delay: 9000 }, 
+                      { src: "1.jpg", fade: 1000, delay: 9000 }, 
+                      { src: "../1.jpg", fade: 1000, delay: 9000 }, 
+                      { src: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1492976621&di=810902f947112291c1c21a1e46aa35dc&imgtype=jpg&er=1&src=http%3A%2F%2Fcdn.duitang.com%2Fuploads%2Fitem%2F201210%2F21%2F20121021202014_kAAr3.thumb.600_0.jpeg", fade: 1000, delay: 9000 }, 
                       { src: "../../img/2.jpg", fade: 1000, delay: 9000 }, 
-                      { src: '/img/3.jpg', fade: 1000, delay: 9000 }, 
+                      { src: "/img/3.jpg", fade: 1000, delay: 9000 }, 
                         
                      
                     ]
