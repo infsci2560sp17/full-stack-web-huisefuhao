@@ -41,11 +41,9 @@
             $(function () {
                 $.vegas('slideshow', {
                     backgrounds: [
-                      { src: '../img/1.jpg', fade: 1000, delay: 9000 }, 
-                      { src: '../img/2.jpg', fade: 1000, delay: 9000 }, 
-                      { src: '../img/3.jpg', fade: 1000, delay: 9000 }, 
-                        
-                     
+                      { th:src="@{/img/1.jpg}" src: '../img/1.jpg', fade: 1000, delay: 9000 }, 
+                      { th:src="@{/img/2.jpg}" src: '../img/2.jpg', fade: 1000, delay: 9000 }, 
+                      { th:src="@{/img/3.jpg}" src: '../img/3.jpg', fade: 1000, delay: 9000 }, 
                     ]
                 })('overlay', {
                     /** SLIDESHOW OVERLAY IMAGE **/
