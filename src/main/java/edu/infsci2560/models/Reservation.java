@@ -30,6 +30,7 @@ public class Reservation {
     protected long nights;
     protected String name;
     protected String email;
+    protected String message;
 
 
     public Reservation() {
@@ -38,6 +39,7 @@ public class Reservation {
         this.nights = Long.MAX_VALUE;
         this.name = null;
         this.email = null;
+        this.message = null;
     }
 
     public Reservation(Long id, String date, long nights, String name, String email) {
@@ -46,11 +48,12 @@ public class Reservation {
         this.nights = nights;
         this.name = name;
         this.email = email;
+        this.message = message;
     }
 
     @Override
     public String toString() {
-        return "[ id=" + this.id + ", date=" + this.date + ", nights=" + this.nights +  ", name=" + this.name + ", email=" + this.email +" ]";
+        return "[ id=" + this.id + ", date=" + this.date + ", nights=" + this.nights +  ", name=" + this.name + ", email=" + this.email +", message=" + this.message +" ]";
     }
 
 
@@ -134,5 +137,19 @@ public class Reservation {
      */
     public void setEmail(String email) {
         this.email = email;
+    }
+    
+    /**
+     * @return the size
+     */
+    public String getMessage() {
+        return message;
+    }
+
+    /**
+     * @param size to set
+     */
+    public void setMessage(String message) {
+        this.message = message;
     }
 }

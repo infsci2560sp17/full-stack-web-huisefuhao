@@ -1,54 +1,143 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Breakfast</title>
-        <link rel="stylesheet" href="css/bootstrap.min.css"/>
-        <link rel="stylesheet" href="css/style.css"/>
-        <script scr="js/jquery-3.1.1.min.js"></script>
-        <script scr="js/bootstrap.min.js"></script>
-        <script scr="js/script.js"></script>
-    </head>
-    <body>
-        <div id="div1"><img src="picture/northlight.jpg" /></div>
-        <h1 data-th-inline="text">BREAKFAST's INFORMATION</h1>
+<html lang="en">
 
-        <div>
-            <table style="border: 1px solid black">
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Breakfast Type</th>
-                    <th>Description</th>
-                    <th>Food</th>
-                    <th>Beverage</th>
+<head>
 
-                </tr>
-                <tr data-th-each="breakfast : ${breakfast}">
-                    <td data-th-text="${breakfast.id}"></td>
-                    <td data-th-text="${breakfast.name}"></td>
-                    <td data-th-text="${breakfast.breakfastType}"></td>
-                    <td data-th-text="${breakfast.description}"></td>
-                    <td data-th-text="${breakfast.food}"></td>
-                    <td data-th-text="${breakfast.beverage}"></td>
-                </tr>
-            </table>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>North Pole Bed and Breakfast</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" th:href="@{/css/business-casual.css}" href="../../css/business-casual.css"  />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div class="brand">Bed And Breakfast</div>
+    <div class="address-bar">3481 Melrose Place | Beverly Hills, CA 90210 | 123.456.7890</div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+                <a class="navbar-brand" href="index.html">Business Casual</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="room.html">Room</a>
+                    </li>
+                    <li>
+                        <a href="activity.html">Activity</a>
+                    </li>
+                    <li>
+                        <a href="breakfast.html">Breakfast</a>
+                    </li>
+                    <li>
+                        <a href="reservation.html">Reservation</a>
+                    </li>
+                    <li>
+                        <a href="logout.html">Log out</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
+        <!-- /.container -->
+    </nav>
+
+    <div class="container">
+
         
-        <hr />
-        Add Breakfast<br />
-        <form data-th-action="@{/breakfast/add}" name="addBreakfastForm" method="post">
-            Name: <input type="text" name="name" /><br />
-            Room Type:<br />
-            <input type="radio" name="breakfastType" value="Unknown" checked="checked" /> Unknown<br />
-            <input type="radio" name="breakfastType" value="AmericanStyle" />American<br />
-            <input type="radio" name="breakfastType" value="ChineseStyle" />Chinese<br />
-            Description: <input type="text" name="description" /><br />
-            Food: <input type="text" name="food" /><br />
-            Beverage: <input type="text" name="beverage" /><br />
-            <input type="submit" value="Add Breakfast"/>
-        </form>
-        
-        <hr />       
-        <a data-th-href="@{/nav}">HomePage</a>
-    </body>
+
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">Our
+                        <strong>Breakfast</strong>
+                    </h2>
+                    <hr>
+                </div>
+                <div class="col-sm-6 text-center">
+                    <img class="img-responsive" src="http://desk.fd.zol-img.com.cn/t_s2880x1800c5/g5/M00/04/04/ChMkJlbLwaiIRzwYAAwIfSSOi20AALP6wD6m5IADAiV468.jpg" alt="">
+                    <h3>sushi
+                        <small>Japanese</small>
+                    </h3>
+                </div>
+                <div class="col-sm-6 text-center">
+                    <img class="img-responsive" src="http://desk.fd.zol-img.com.cn/t_s1920x1200c5/g5/M00/09/08/ChMkJ1Z9AyeISrl2ABWa7_V3yu8AAGlOQCt3csAFZsH471.jpg" alt="">
+                    <h3>fruits
+                        <small>season</small>
+                    </h3>
+                </div>
+                <div class="col-sm-6 text-center">
+                    <img class="img-responsive" src="http://desk.fd.zol-img.com.cn/t_s2880x1800c5/g5/M00/09/08/ChMkJ1Z9Ay6ICcd6AB-nnJ6wUeUAAGlOgGIfp8AH6e0004.jpg" alt="">
+                    <h3>Paella
+                        <small>Spanish</small>
+                    </h3>
+                </div>
+                <div class="col-sm-6 text-center">
+                    <img class="img-responsive" src="http://desk.fd.zol-img.com.cn/t_s1920x1200c5/g5/M00/09/08/ChMkJlZ9AzWIO1sPAB29LCsUC8IAAGlOwIbaKoAHb1E654.jpg" alt="">
+                    <h3>Calamares
+                        <small>seafood</small>
+                    </h3>
+                </div>
+                
+                <div class="clearfix"></div>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p>Copyright &copy; NORTH POLE BED AND BREAKFAST 2017.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+
 </html>

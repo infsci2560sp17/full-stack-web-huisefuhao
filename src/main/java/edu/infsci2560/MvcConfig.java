@@ -11,12 +11,11 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/home").setViewName("home");
         registry.addViewController("/").setViewName("home");
-        registry.addViewController("/nav").setViewName("nav");
+        registry.addViewController("/index").setViewName("index");
         registry.addViewController("/rooms").setViewName("rooms");
         registry.addViewController("/breakfast").setViewName("breakfast");
         registry.addViewController("/reservation").setViewName("reservation");
         registry.addViewController("/activity").setViewName("activity");
         registry.addViewController("/login").setViewName("login");
     }
-
 }
