@@ -59,7 +59,7 @@ public class Reservation {
 
     @Override
     public String toString() {
-        return "[ id=" + this.id + ", room=" + this.room +", date=" + this.date + ", nights=" + this.nights +  ", name=" + this.name + ", email=" + this.email +", message=" + this.message +" ]";
+        return "[ id=" + this.id + ", room=" + this.room +", date=" + this.date +", telphone=" + this.tel+ ", nights=" + this.nights +  ", name=" + this.name + ", email=" + this.email +", message=" + this.message +" ]";
     }
 
 
@@ -96,7 +96,7 @@ public class Reservation {
     }
 
     /**
-     * @param id the id to set
+     * @param tel the tel to set
      */
     public void setTel(String tel) {
         this.tel = tel;

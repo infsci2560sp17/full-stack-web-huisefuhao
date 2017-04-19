@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Recipes</title>
+        <title>Edit</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
@@ -42,7 +42,7 @@
                     <td data-th-text="${Reservation.date}"></td>
                     <td data-th-text="${Reservation.nights}"></td>
                     <td data-th-text="${Reservation.message}"></td>
-                    <td><a href="https://pc-huisefuhao.herokuapp.com/ReservationEdit">edit</a></td>
+                    <td><a data-th-href="@{/reservation/edit/{id}(id=${Reservation.id})}">edit</a></td>
                     </tr>
             </table>
         </div>
