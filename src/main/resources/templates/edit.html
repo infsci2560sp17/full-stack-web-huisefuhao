@@ -24,6 +24,7 @@
         <div class="container">
             <table align="center" class="table table-hover">
                 <tr>
+                    <th>ID</th>
                     <th>Room</th>
                     <th>Name</th>
                     <th>Telphone</th>
@@ -33,6 +34,7 @@
                     <th>Message</th>
                 </tr>                
                 <tr data-th-each="Reservation : ${reservation}">
+                    <td data-th-text="${Reservation.id}"></td>
                     <td data-th-text="${Reservation.room}"></td>
                     <td data-th-text="${Reservation.name}"></td>
                     <td data-th-text="${Reservation.tel}"></td>
