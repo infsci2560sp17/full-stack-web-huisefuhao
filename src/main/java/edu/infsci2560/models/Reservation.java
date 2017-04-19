@@ -44,7 +44,7 @@ public class Reservation {
         this.message = null;
     }
 
-    public Reservation(Long id, String date, long nights, String name, String email) {
+    public Reservation(Long id, String room, String name, String email, String date, Long nights, String message) {
         this.id = id;
         this.date = date;
         this.room = room;

@@ -45,9 +45,9 @@ public class FullStackWebApplication {
         breakfastrepository.save(new Breakfast(3L, "deer", BreakfastType.Unknown, "beast", "beast", "beast"));
 
         ReservationRepository reservationrepository = ctx.getBean(ReservationRepository.class);
-        reservationrepository.save(new Reservation(1L, "beast", 120L, "beast", "beast"));
-        reservationrepository.save(new Reservation(2L, "cow",  110L, "beast", "beast"));
-        reservationrepository.save(new Reservation(3L, "deer", 55L, "beast", "beast"));
+        reservationrepository.save(new Reservation(1L, "moose suite", "Neil", "xxx@gmail.com", "4/10 2017", 7L, "nice place"));
+        reservationrepository.save(new Reservation(2L, "caribou suite", "Peter", "xxxx@gmail.com", "4/18 2017", 2L, "for vacation"));
+        reservationrepository.save(new Reservation(3L, "grizzly cub", "Mike", "Mike@gmail.com", "5/10 2017", 1L, "= ="));
     }
 
 //    @Bean

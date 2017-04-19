@@ -117,7 +117,7 @@
                     <form role="form">
                         
                         <div class="row">
-                            <table align="center" style="border: 1px solid black" class="table table-hover">
+                            <table align="center" class="table table-hover">
                             <tr>
                             <th>Room</th>
                             <th>Name</th>
@@ -125,6 +125,7 @@
                             <th>Date</th>
                             <th>Nights</th>
                             <th>Message</th>
+                            <th></th>
                             </tr>                
                             <tr data-th-each="Reservation : ${reservation}">
                             <td data-th-text="${Reservation.room}"></td>
@@ -136,23 +137,23 @@
                             <td><a data-th-href="@{/reservation/edit/{id}(id=${Reservation.id})}">edit</a></td>
                             </tr>
                             </table>
-                            <div class="form-group col-lg-2.4">
+                            <div class="form-group col-lg-2">
                                 <label>Room</label>
                                 <input type="text" class="form-control" />
                             </div>
-                            <div class="form-group col-lg-2.4">
+                            <div class="form-group col-lg-2">
                                 <label>Name</label>
                                 <input type="text" class="form-control" />
                             </div>
-                            <div class="form-group col-lg-2.4">
+                            <div class="form-group col-lg-4">
                                 <label>Email Address</label>
                                 <input type="email" class="form-control" />
                             </div>
-                            <div class="form-group col-lg-2.4">
+                            <div class="form-group col-lg-2">
                                 <label>Date</label>
                                 <input type="text" class="form-control" />
                             </div>
-                            <div class="form-group col-lg-2.4">
+                            <div class="form-group col-lg-2">
                                 <label>Nights</label>
                                 <input type="text" class="form-control" />
                             </div>
