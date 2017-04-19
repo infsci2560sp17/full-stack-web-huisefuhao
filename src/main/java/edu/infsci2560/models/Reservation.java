@@ -28,6 +28,7 @@ public class Reservation {
     protected Long id;
     protected String date;
     protected long nights;
+    protected String room;
     protected String name;
     protected String email;
     protected String message;
@@ -36,6 +37,7 @@ public class Reservation {
     public Reservation() {
         this.id = Long.MAX_VALUE;
         this.date = null;
+        this.room = null;
         this.nights = Long.MAX_VALUE;
         this.name = null;
         this.email = null;
@@ -45,6 +47,7 @@ public class Reservation {
     public Reservation(Long id, String date, long nights, String name, String email) {
         this.id = id;
         this.date = date;
+        this.room = room;
         this.nights = nights;
         this.name = name;
         this.email = email;
@@ -53,7 +56,7 @@ public class Reservation {
 
     @Override
     public String toString() {
-        return "[ id=" + this.id + ", date=" + this.date + ", nights=" + this.nights +  ", name=" + this.name + ", email=" + this.email +", message=" + this.message +" ]";
+        return "[ id=" + this.id + ", room=" + this.room +", date=" + this.date + ", nights=" + this.nights +  ", name=" + this.name + ", email=" + this.email +", message=" + this.message +" ]";
     }
 
 
@@ -95,6 +98,21 @@ public class Reservation {
     public void setDate(String date) {
         this.date = date;
     }
+
+    /**
+     * @return the room
+     */
+    public String getRoom() {
+        return room;
+    }
+
+    /**
+     * @param title the name to set
+     */
+    public void setRoom(String room) {
+        this.room = room;
+    }
+
 
     /**
      * @return the activityType

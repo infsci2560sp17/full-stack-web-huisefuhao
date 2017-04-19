@@ -115,7 +115,26 @@
                     <hr />
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, vitae, distinctio, possimus repudiandae cupiditate ipsum excepturi dicta neque eaque voluptates tempora veniam esse earum sapiente optio deleniti consequuntur eos voluptatem.</p>
                     <form role="form">
+                        
                         <div class="row">
+                            <table align="center" style="border: 1px solid black" class="table table-hover">
+                            <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Recipe Type</th>
+                            <th>Recipe Procedure</th>
+                            </tr>                
+                            <tr data-th-each="Reservation : ${reservation}">
+                            <td data-th-text="${Reservation.id}"></td>
+                            <td data-th-text="${Reservation.room}"></td>
+                            <td data-th-text="${Reservation.name}"></td>
+                            <td data-th-text="${Reservation.email}"></td>
+                            <td data-th-text="${Reservation.date}"></td>
+                            <td data-th-text="${Reservation.nights}"></td>
+                            <td data-th-text="${Reservation.message}"></td>
+                            <td><a data-th-href="@{/reservation/edit/{id}(id=${Reservation.id})}">edit</a></td>
+                            </tr>
+                            </table>
                             <div class="form-group col-lg-3">
                                 <label>Name</label>
                                 <input type="text" class="form-control" />
