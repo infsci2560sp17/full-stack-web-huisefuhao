@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -121,6 +119,7 @@
                                 <tr>
                                     <th>Room</th>
                                     <th>Name</th>
+                                    <th>Telphone</th>
                                     <th>Email</th>
                                     <th>Date</th>
                                     <th>Nights</th>
@@ -130,21 +129,28 @@
                                 <tr data-th-each="Reservation : ${reservation}">
                                     <td data-th-text="${Reservation.room}"></td>
                                     <td data-th-text="${Reservation.name}"></td>
+                                    <td data-th-text="${Reservation.tel}"></td>
                                     <td data-th-text="${Reservation.email}"></td>
                                     <td data-th-text="${Reservation.date}"></td>
                                     <td data-th-text="${Reservation.nights}"></td>
                                     <td data-th-text="${Reservation.message}"></td>
-                                    <td><a data-th-href="@{/reservation/edit/{id}(id=${Reservation.id})}">edit</a></td>
+                                    <td><a href="https://pc-huisefuhao.herokuapp.com/edit">edit</a></td>
                                 </tr>
                             </table>
-
-                            <div class="form-group col-lg-2">
+                            <div class="form-group col-lg-12">
                                 <label>Room</label>
-                                <input type="text" name="room" class="form-control" />
+                                <input type="radio" name="room" value="Unknown" checked="checked"/>Unknown
+                                <input type="radio" name="room" value="MeatLover" /> MeatLover
+                                <input type="radio" name="room" value="Vegetarian" /> Vegetarian
+                                <input type="radio" name="room" value="Baker" /> Baker
                             </div>
                             <div class="form-group col-lg-2">
                                 <label>Name</label>
                                 <input type="text" name="name" class="form-control" />
+                            </div>
+                            <div class="form-group col-lg-2">
+                                <label>Phone Number</label>
+                                <input type="tel" name="tel" class="form-control" />
                             </div>
                             <div class="form-group col-lg-4">
                                 <label>Email Address</label>

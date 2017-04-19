@@ -27,6 +27,7 @@ public class Reservation {
     @GeneratedValue(strategy = GenerationType.AUTO)
     protected Long id;
     protected String date;
+    protected String tel;
     protected long nights;
     protected String room;
     protected String name;
@@ -36,6 +37,7 @@ public class Reservation {
 
     public Reservation() {
         this.id = Long.MAX_VALUE;
+        this.tel =null;
         this.date = null;
         this.room = null;
         this.nights = Long.MAX_VALUE;
@@ -44,9 +46,10 @@ public class Reservation {
         this.message = null;
     }
 
-    public Reservation(Long id, String room, String name, String email, String date, Long nights, String message) {
+    public Reservation(Long id, String room, String name,String tel, String email, String date, Long nights, String message) {
         this.id = id;
         this.date = date;
+        this.tel = tel;
         this.room = room;
         this.nights = nights;
         this.name = name;
@@ -83,6 +86,20 @@ public class Reservation {
      */
     public void setId(Long id) {
         this.id = id;
+    }
+
+    /**
+     * @return the tel
+     */
+    public String getTel() {
+        return tel;
+    }
+
+    /**
+     * @param id the id to set
+     */
+    public void setTel(String tel) {
+        this.tel = tel;
     }
 
     /**
