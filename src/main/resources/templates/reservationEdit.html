@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Edit Recipe</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style type = "text/css">
+            body,h1{
+                font-family: "Comic Sans MS",sans-serif
+            }
+            body{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+        <h1 data-th-inline="text">Update reservation here. </h1>
+            <form data-th-action="@{/reservation/edit/{id}(id=${reservation.id})}" data-th-object="${reservation}" data-th-method="put" role="form">
+                Room:<br />
+                <input type="radio" name="room" value="MOOSE SUITE" checked="checked"/>MOOSE SUITE<br />
+                <input type="radio" name="room" value="CARIBOU SUITE" /> CARIBOU SUITE<br />
+                <input type="radio" name="room" value="GRIZZLY CUB" /> GRIZZLY CUB<br />
+                <input type="radio" name="room" value="BLACK BEAR" /> BLACK BEAR<br />
+                <label>Name</label>
+                <input type="text" name="name" class="form-control" />
+                <label>Phone Number</label>
+                                <input type="tel" name="tel" class="form-control" />
+                <label>Email Address</label>
+                                <input type="email" name="email" class="form-control" />
+                <label>Date</label>
+                                <input type="date" name="date" class="form-control" />
+                <label>Nights</label>
+                                <input type="number" name="nights" class="form-control" />
+                <label>Message</label>
+                                <textarea class="form-control" name="message" rows="6"></textarea>
+                <!--recipeType: <span data-th-value="${Recipe.getRecipeType()}" /><br />
+                procedure: <span data-th-value = "${Recipe.getProcedure()}" />-->
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Recipes</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style type = "text/css">
+            body,h1{
+                font-family: "Comic Sans MS",sans-serif
+            }
+            body{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1 data-th-inline="text">[[${#httpServletRequest.remoteUser}]]'s wonderful recipes!</h1>
+        </div>
+        
+        <div class="container">
+            <table align="center" class="table table-hover">
+                <tr>
+                    <th>ID</th>
+                    <th>Room</th>
+                    <th>Name</th>
+                    <th>Telphone</th>
+                    <th>Email</th>
+                    <th>Date</th>
+                    <th>Nights</th>
+                    <th>Message</th>
+                </tr>                
+                <tr data-th-each="Reservation : ${reservation}">
+                    <td data-th-text="${Reservation.id}"></td>
+                    <td data-th-text="${Reservation.room}"></td>
+                    <td data-th-text="${Reservation.name}"></td>
+                    <td data-th-text="${Reservation.tel}"></td>
+                    <td data-th-text="${Reservation.email}"></td>
+                    <td data-th-text="${Reservation.date}"></td>
+                    <td data-th-text="${Reservation.nights}"></td>
+                    <td data-th-text="${Reservation.message}"></td>
+                    <td><a href="https://pc-huisefuhao.herokuapp.com/ReservationEdit">edit</a></td>
+                    </tr>
+            </table>
+        </div>
+        
+        
+        <!--<hr />
+        <div class="container">
+            Edit Recipe<br />
+            <form data-th-action="@{recipe/edit/{id}}" name="editRecipe" method="edit">
+                Input the recipe id that you want to edit: <input type="text" name="id" /><br /> 
+                <input type="submit" class="btn btn-success" value="Edit Recipe" data-th-href="@{/recipeEdit}"/>
+            </form>
+        </div>-->
+        
+        <hr />
+        <div class="container">
+            Delete Recipe<br />
+            <form data-th-action="@{/reservation/delete}" name="deleteReservation" method="delete">
+                Input the recipe id that you want to delete: <input type="text" name="id" /><br /> 
+                <br />
+                <input type="submit" class="btn btn-danger" value="Delete Reservation"/>
+            </form>
+        </div>
+        
+        <hr />
+        <div class="container">
+            Go back to <a data-th-href="@{/index}">main page</a> ! 
+        </div>
+        
+        <hr />
+        <div class="container">
+            <form data-th-action="@{/logout}" method="post">
+                <input type="submit" class="btn btn-warning" value="Sign Out"/>
+            </form>
+        </div>
+    </body>
+</html>
