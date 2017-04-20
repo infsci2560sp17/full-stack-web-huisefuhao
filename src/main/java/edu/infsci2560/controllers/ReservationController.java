@@ -55,13 +55,6 @@ public class ReservationController {
         return new ModelAndView("reservation", "reservation", repository.findAll());
     }
 
-    @RequestMapping(value = "reservation/{id}", 
-            method = RequestMethod.DELETE, 
-            consumes="application/x-www-form-urlencoded", 
-            produces = "application/json")
-    public ModelAndView delete( @Valid Reservation reservation, BindingResult result) {
-        repository.delete(reservation);
-        return new ModelAndView("reservation", "reservation", repository.findAll());
-    }
+    
 
 }

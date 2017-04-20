@@ -45,9 +45,12 @@ public class ReservationService {
         return new ResponseEntity<>(repository.findOne(id), headers, HttpStatus.OK);
     }
 
-    @RequestMapping(method = RequestMethod.POST, consumes="application/json", produces = "application/json")
-    public ResponseEntity<Reservation> create(@RequestBody Reservation reservation) {
-        HttpHeaders headers = new HttpHeaders();
-        return new ResponseEntity<>(repository.save(reservation), headers, HttpStatus.OK);
+    @RequestMapping(value = "reservation/{id}", 
+            method = RequestMethod.DELETE, 
+            consumes="application/x-www-form-urlencoded", 
+            produces = "application/json")
+    public ModelAndView delete( @Valid Reservation reservation, BindingResult result) {
+        repository.delete(reservation);
+        return new ModelAndView("reservation", "reservation", repository.findAll());
     }
 }
