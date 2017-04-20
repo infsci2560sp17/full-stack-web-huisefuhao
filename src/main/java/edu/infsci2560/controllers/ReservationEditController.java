@@ -27,7 +27,7 @@ import org.springframework.web.servlet.ModelAndView;
  * @author Neil
  */
 @Controller
-public class ReservationController {
+public class ReservationEditController {
     @Autowired
     private ReservationRepository repository;
     
