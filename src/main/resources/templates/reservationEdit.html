@@ -25,23 +25,42 @@ and open the template in the editor.
         <div class="container">
         <h1 data-th-inline="text">Edit reservation here. </h1>
             <form data-th-action="@{/reservation/edit/{id}(id=${reservation.id})}" data-th-object="${reservation}" data-th-method="put" role="form">
+            <div class="form-group col-lg-12">
                 Room:<br />
                 <input type="radio" name="room" value="MOOSE SUITE" checked="checked"/>MOOSE SUITE<br />
                 <input type="radio" name="room" value="CARIBOU SUITE" /> CARIBOU SUITE<br />
                 <input type="radio" name="room" value="GRIZZLY CUB" /> GRIZZLY CUB<br />
                 <input type="radio" name="room" value="BLACK BEAR" /> BLACK BEAR<br />
-                <label>Name</label>
-                <input type="text" name="name" class="form-control" />
-                <label>Phone Number</label>
+            </div>
+
+            <div class="form-group col-lg-2">
+                                <label>Name</label>
+                                <input type="text" name="name" class="form-control" />
+                            </div>
+                            <div class="form-group col-lg-2">
+                                <label>Phone Number</label>
                                 <input type="tel" name="tel" class="form-control" />
-                <label>Email Address</label>
+                            </div>
+                            <div class="form-group col-lg-4">
+                                <label>Email Address</label>
                                 <input type="email" name="email" class="form-control" />
-                <label>Date</label>
+                            </div>
+                            <div class="form-group col-lg-2">
+                                <label>Date</label>
                                 <input type="date" name="date" class="form-control" />
-                <label>Nights</label>
+                            </div>
+                            <div class="form-group col-lg-2">
+                                <label>Nights</label>
                                 <input type="number" name="nights" class="form-control" />
-                <label>Message</label>
+                            </div>
+                            <div class="clearfix"></div>
+            
+            <div class="form-group col-lg-12">
+                                <label>Message</label>
                                 <textarea class="form-control" name="message" rows="6"></textarea>
+            </div>
+
+
                 <!--recipeType: <span data-th-value="${Recipe.getRecipeType()}" /><br />
                 procedure: <span data-th-value = "${Recipe.getProcedure()}" />-->
                 <button type="submit" class="btn btn-default" value="Edit Reservation">Submit</button>
