@@ -23,7 +23,7 @@ and open the template in the editor.
     </head>
     <body>
         <div class="container">
-        <h1 data-th-inline="text">Update reservation here. </h1>
+        <h1 data-th-inline="text">Edit reservation here. </h1>
             <form data-th-action="@{/reservation/edit/{id}(id=${reservation.id})}" data-th-object="${reservation}" data-th-method="put" role="form">
                 Room:<br />
                 <input type="radio" name="room" value="MOOSE SUITE" checked="checked"/>MOOSE SUITE<br />
@@ -44,6 +44,7 @@ and open the template in the editor.
                                 <textarea class="form-control" name="message" rows="6"></textarea>
                 <!--recipeType: <span data-th-value="${Recipe.getRecipeType()}" /><br />
                 procedure: <span data-th-value = "${Recipe.getProcedure()}" />-->
+                <button type="submit" class="btn btn-default" value="Edit Reservation">Submit</button>
             </form>
         </div>
     </body>
