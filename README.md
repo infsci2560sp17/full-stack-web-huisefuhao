@@ -14,7 +14,7 @@
 
 ## Latest Progress
 
-Finish Assignment 1.3 Full Stack Step 1
+Finish Project
 - Details in CHANGELOG.md
 
 ## Build status
@@ -34,8 +34,10 @@ Finish Assignment 1.3 Full Stack Step 1
 ![](http://www.qqtouxiang.com/d/file/qinglv/20170212/f4eabd3bede4bb63ee566c39e8652ad7.jpg)
 
 ## Key Features
+User login
 
-TODO : Please list key features of your project.
+
+
 
 * Key Feature 1
 * Key Feature 2

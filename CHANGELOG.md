@@ -7,6 +7,19 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Added
 - TBD.
 
+## [v1.5] - 2017-04-20
+### Added
+- Change the frontend frameworkd of my website.
+- Add CRUD function for users to make reservation at reservation page.
+- Add css , js , bootstrap, jquery for all pages.
+
+## [v1.4] - 2017-03-25
+### Added
+- Create other four entities and do their related works similar to V1.3.
+- Create all pages with ability to CRUD.
+- Add css , js , bootstrap, jquery for homepage.
+
+
 ## [v1.3] - 2017-02-16
 ### Added
 - Create entity Room.
@@ -32,7 +45,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - Configured developer workspace.
 - Deployed to Heroku.
 
-[Unreleased]: https://github.com/infsci2560sp17/full-stack-web-huisefuhao/compare/v1.3...HEAD
+[Unreleased]: https://github.com/infsci2560sp17/full-stack-web-huisefuhao/compare/v1.5...HEAD
+[v1.5]: https://github.com/infsci2560sp17/full-stack-web-huisefuhao/compare/v1.4...v1.5
+[v1.4]: https://github.com/infsci2560sp17/full-stack-web-huisefuhao/compare/v1.3...v1.4
 [v1.3]: https://github.com/infsci2560sp17/full-stack-web-huisefuhao/compare/v1.2...v1.3
 [v1.2]: https://github.com/infsci2560sp17/full-stack-web-huisefuhao/compare/v1.1...v1.2
 [v1.1]: https://github.com/infsci2560sp17/full-stack-web-huisefuhao/compare/...v1.1
