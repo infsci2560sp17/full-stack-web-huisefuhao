@@ -113,7 +113,6 @@
                     <hr />
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, vitae, distinctio, possimus repudiandae cupiditate ipsum excepturi dicta neque eaque voluptates tempora veniam esse earum sapiente optio deleniti consequuntur eos voluptatem.</p>
                     <form data-th-action="@{/reservation/add}" name="addReservation" method="post" role="form">
-                        
                         <div class="row">
                             <table align="center" class="table table-hover">
                                 <tr>
@@ -124,6 +123,7 @@
                                     <th>Date</th>
                                     <th>Nights</th>
                                     <th>Message</th>
+                                    <th></th>
                                     <th></th>
                                 </tr>                
                                 <tr data-th-each="Reservation : ${reservation}">
