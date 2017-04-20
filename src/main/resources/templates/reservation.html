@@ -117,6 +117,7 @@
                         <div class="row">
                             <table align="center" class="table table-hover">
                                 <tr>
+                                    <th>ID</th>
                                     <th>Room</th>
                                     <th>Name</th>
                                     <th>Telphone</th>
@@ -127,6 +128,7 @@
                                     <th></th>
                                 </tr>                
                                 <tr data-th-each="Reservation : ${reservation}">
+                                    <td data-th-text="${Reservation.id}"></td>
                                     <td data-th-text="${Reservation.room}"></td>
                                     <td data-th-text="${Reservation.name}"></td>
                                     <td data-th-text="${Reservation.tel}"></td>
@@ -134,7 +136,8 @@
                                     <td data-th-text="${Reservation.date}"></td>
                                     <td data-th-text="${Reservation.nights}"></td>
                                     <td data-th-text="${Reservation.message}"></td>
-                                    <td><a href="https://pc-huisefuhao.herokuapp.com/edit">edit</a></td>
+                                    <td><a data-th-href="@{/reservation/edit/{id}(id=${Reservation.id})}">edit</a></td>
+                                    <td><a data-th-href="@{/reservation/delete(id=${Reservation.id})}">delete</a></td>
                                 </tr>
                             </table>
                             <div class="form-group col-lg-12">
@@ -176,31 +179,6 @@
                         </div>
                     </form>
                 </div>
-                <div class="container">
-            <table align="center" class="table table-hover">
-                <tr>
-                    <th>ID</th>
-                    <th>Room</th>
-                    <th>Name</th>
-                    <th>Telphone</th>
-                    <th>Email</th>
-                    <th>Date</th>
-                    <th>Nights</th>
-                    <th>Message</th>
-                </tr>                
-                <tr data-th-each="Reservation : ${reservation}">
-                    <td data-th-text="${Reservation.id}"></td>
-                    <td data-th-text="${Reservation.room}"></td>
-                    <td data-th-text="${Reservation.name}"></td>
-                    <td data-th-text="${Reservation.tel}"></td>
-                    <td data-th-text="${Reservation.email}"></td>
-                    <td data-th-text="${Reservation.date}"></td>
-                    <td data-th-text="${Reservation.nights}"></td>
-                    <td data-th-text="${Reservation.message}"></td>
-                    <td><a data-th-href="@{/reservation/edit/{id}(id=${Reservation.id})}">edit</a></td>
-                    </tr>
-            </table>
-        </div>
             </div>
         </div>
 

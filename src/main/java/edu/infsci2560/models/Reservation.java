@@ -40,7 +40,7 @@ public class Reservation {
         this.tel =null;
         this.date = null;
         this.room = null;
-        this.nights = Long.MAX_VALUE;
+        this.nights = 1L;
         this.name = null;
         this.email = null;
         this.message = null;
