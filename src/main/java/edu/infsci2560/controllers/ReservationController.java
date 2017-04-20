@@ -46,6 +46,15 @@ public class ReservationController {
         return new ModelAndView("reservation", "reservation", repository.findAll());
     }
 
+    @RequestMapping(value = "reservation/delete", method = RequestMethod.GET)
+    public ModelAndView delete(@RequestParam(value="id", required=true) Long id) {
+        Reservation reservation = repository.findOne(id);  
+        if ( recipe != null ) {
+            repository.delete(reservation);
+        }
+        return new ModelAndView("reservation", "reservation", repository.findAll());
+    }
+
     @RequestMapping(value = "reservation/{id}", 
             method = RequestMethod.DELETE, 
             consumes="application/x-www-form-urlencoded", 
@@ -54,4 +63,5 @@ public class ReservationController {
         repository.delete(reservation);
         return new ModelAndView("reservation", "reservation", repository.findAll());
     }
+
 }
