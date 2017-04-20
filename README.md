@@ -33,25 +33,45 @@ Finish Project
 
 ![](http://www.qqtouxiang.com/d/file/qinglv/20170212/f4eabd3bede4bb63ee566c39e8652ad7.jpg)
 
-## Key Features
-User login
-
-
-
-
-* Key Feature 1
-* Key Feature 2
-* Key Feature N
 
 ## Project Details
-
 ### Landing Page
+There is a welcome page. Users can click "Welcome" to jump to login page. After verifying user information, the web will jump to the main page, where users can find out several useful sections. Several bootstrap and jquery features are used.
+<img src="https://github.com/infsci2560sp17/full-stack-web-huisefuhao/blob/master/src/main/resources/presentation/homepage.png">
+<img src="https://github.com/infsci2560sp17/full-stack-web-huisefuhao/blob/master/src/main/resources/presentation/homepage2.png">
 
-TODO : please provide a description of your landing page inluding a screen shot ![](https://.../image.JPG)
+### User Login
+This is the login page. 
+<img src="https://github.com/infsci2560sp17/full-stack-web-huisefuhao/blob/master/src/main/resources/presentation/login.png">
 
-### User Input Form
+### Main Page
+Main page displays the guidance to the whole website and works as a central control.
+<img src="https://github.com/infsci2560sp17/full-stack-web-huisefuhao/blob/master/src/main/resources/presentation/index1.png">
+<img src="https://github.com/infsci2560sp17/full-stack-web-huisefuhao/blob/master/src/main/resources/presentation/index2.png">
 
-TODO : please provide a description of at least 1 user input form including a screen shot ![](https://.../image.jpg)
+### Room Section
+Users can see the details and picture about all rooms. 
+<img src="https://github.com/infsci2560sp17/full-stack-web-huisefuhao/blob/master/src/main/resources/presentation/room1.png">
+
+### Activity Section
+Users can see all activities here and see more related information from other websites. 
+<img src="https://github.com/infsci2560sp17/full-stack-web-huisefuhao/blob/master/src/main/resources/presentation/activity1.png">
+<img src="https://github.com/infsci2560sp17/full-stack-web-huisefuhao/blob/master/src/main/resources/presentation/activity2.png">
+<img src="https://github.com/infsci2560sp17/full-stack-web-huisefuhao/blob/master/src/main/resources/presentation/activity3.png">
+
+### Breakfast Section
+Users can see breakfast here. 
+<img src="https://github.com/infsci2560sp17/full-stack-web-huisefuhao/blob/master/src/main/resources/presentation/food.png">
+
+### Reservation Section
+In this section, users can see other reservations and support users to check, add ,delete and edit reservations. 
+<img src="https://github.com/infsci2560sp17/full-stack-web-huisefuhao/blob/master/src/main/resources/presentation/reservation1.png">
+<img src="https://github.com/infsci2560sp17/full-stack-web-huisefuhao/blob/master/src/main/resources/presentation/check.png">
+<img src="https://github.com/infsci2560sp17/full-stack-web-huisefuhao/blob/master/src/main/resources/presentation/add.png">
+<img src="https://github.com/infsci2560sp17/full-stack-web-huisefuhao/blob/master/src/main/resources/presentation/delete.png">
+<img src="https://github.com/infsci2560sp17/full-stack-web-huisefuhao/blob/master/src/main/resources/presentation/edit.png">
+
+
 
 ## API
 
