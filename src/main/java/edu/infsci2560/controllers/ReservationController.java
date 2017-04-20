@@ -50,7 +50,7 @@ public class ReservationController {
     @RequestMapping(value = "reservation/delete", method = RequestMethod.GET)
     public ModelAndView delete(@RequestParam(value="id", required=true) Long id) {
         Reservation reservation = repository.findOne(id);  
-        if ( recipe != null ) {
+        if ( reservation != null ) {
             repository.delete(reservation);
         }
         return new ModelAndView("reservation", "reservation", repository.findAll());
