@@ -31,7 +31,7 @@ Finish Project
 
 [Neil's Website](https://pc-huisefuhao.herokuapp.com/)
 
-![](http://img.woyaogexing.com/2017/03/24/965cb10ca6bcf657!400x400_big.jpg)
+![](https://github.com/infsci2560sp17/full-stack-web-huisefuhao/blob/master/src/main/resources/presentation/f4eabd3bede4bb63ee566c39e8652ad7.jpg)
 
 
 ## Project Details
